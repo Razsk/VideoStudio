@@ -1,0 +1,258 @@
+[
+  {
+    "ledger_index": 0,
+    "scene_shot_id": "SC01_SH01",
+    "active_cast_wardrobe": {
+      "CHAR_ELENA_VANCE": "WARD_ELENA_EVA_TRENCH",
+      "CHAR_MARCUS_KOREN": "WARD_KOREN_LAB_PARKA"
+    },
+    "dynamic_physical_state": {
+      "CHAR_ELENA_VANCE": [
+        "rain_dampened_collar",
+        "breath_misting"
+      ]
+    },
+    "prop_registry_affordance": {
+      "ART_CHRONO_COMPASS": "opened_calibrated"
+    },
+    "spatial_screen_direction": {
+      "axis_id": "AXIS_SC01",
+      "camera_side": "north_of_axis",
+      "subject_facing": "left_to_right",
+      "eyeline_vector": "east_15deg",
+      "axis_reestablished_by_movement": false
+    },
+    "lighting_environmental": {
+      "time_of_day": "NIGHT",
+      "solar_angle": "lunar_storm_zenith",
+      "weather": "subpolar_sleet",
+      "lighting_setup": "Chiaroscuro",
+      "color_grade": "Teal & Orange"
+    },
+    "causal_reveal_flags": [
+      "BEACON_9_HARMONIC_LOCKED"
+    ],
+    "invalidated": false
+  },
+  {
+    "ledger_index": 1,
+    "scene_shot_id": "SC01_SH02",
+    "active_cast_wardrobe": {
+      "CHAR_ELENA_VANCE": "WARD_ELENA_EVA_TRENCH",
+      "CHAR_MARCUS_KOREN": "WARD_KOREN_LAB_PARKA"
+    },
+    "dynamic_physical_state": {
+      "CHAR_ELENA_VANCE": [
+        "rain_dampened_collar",
+        "breath_misting"
+      ],
+      "CHAR_MARCUS_KOREN": [
+        "rain_dampened_collar",
+        "breath_misting"
+      ]
+    },
+    "prop_registry_affordance": {
+      "ART_CHRONO_COMPASS": "opened_calibrated"
+    },
+    "spatial_screen_direction": {
+      "axis_id": "AXIS_SC01",
+      "camera_side": "north_of_axis",
+      "subject_facing": "right_to_left",
+      "eyeline_vector": "west_15deg",
+      "axis_reestablished_by_movement": false
+    },
+    "lighting_environmental": {
+      "time_of_day": "NIGHT",
+      "solar_angle": "lunar_storm_zenith",
+      "weather": "subpolar_sleet",
+      "lighting_setup": "Chiaroscuro",
+      "color_grade": "Teal & Orange"
+    },
+    "causal_reveal_flags": [
+      "BEACON_9_HARMONIC_LOCKED"
+    ],
+    "invalidated": false
+  },
+  {
+    "ledger_index": 2,
+    "scene_shot_id": "SC02_SH01",
+    "active_cast_wardrobe": {
+      "CHAR_ELENA_VANCE": "WARD_ELENA_EVA_TRENCH",
+      "CHAR_MARCUS_KOREN": "WARD_KOREN_LAB_PARKA"
+    },
+    "dynamic_physical_state": {
+      "CHAR_ELENA_VANCE": [
+        "rain_dampened_collar",
+        "breath_misting",
+        "cryo_frost_on_shoulders",
+        "scorch_mark_right_sleeve"
+      ],
+      "CHAR_MARCUS_KOREN": [
+        "rain_dampened_collar",
+        "breath_misting"
+      ]
+    },
+    "prop_registry_affordance": {
+      "ART_CHRONO_COMPASS": "engaged_in_core"
+    },
+    "spatial_screen_direction": {
+      "axis_id": "AXIS_SC02",
+      "camera_side": "north_of_axis",
+      "subject_facing": "left_to_right",
+      "eyeline_vector": "east_15deg",
+      "axis_reestablished_by_movement": false
+    },
+    "lighting_environmental": {
+      "time_of_day": "NIGHT",
+      "solar_angle": "lunar_storm_zenith",
+      "weather": "cryogenic_mist",
+      "lighting_setup": "Volumetric Split",
+      "color_grade": "Bleach Bypass"
+    },
+    "causal_reveal_flags": [
+      "BEACON_9_HARMONIC_LOCKED",
+      "JOVIAN_SHADOW_COORDINATES_DECRYPTED"
+    ],
+    "invalidated": false
+  },
+  {
+    "ledger_index": 3,
+    "scene_shot_id": "SC02_SH02",
+    "active_cast_wardrobe": {
+      "CHAR_ELENA_VANCE": "WARD_ELENA_EVA_TRENCH",
+      "CHAR_MARCUS_KOREN": "WARD_KOREN_LAB_PARKA"
+    },
+    "dynamic_physical_state": {
+      "CHAR_ELENA_VANCE": [
+        "rain_dampened_collar",
+        "breath_misting",
+        "cryo_frost_on_shoulders",
+        "scorch_mark_right_sleeve"
+      ],
+      "CHAR_MARCUS_KOREN": [
+        "rain_dampened_collar",
+        "breath_misting",
+        "cryo_frost_on_shoulders",
+        "scorch_mark_right_sleeve"
+      ]
+    },
+    "prop_registry_affordance": {
+      "ART_CHRONO_COMPASS": "engaged_in_core"
+    },
+    "spatial_screen_direction": {
+      "axis_id": "AXIS_SC02",
+      "camera_side": "north_of_axis",
+      "subject_facing": "right_to_left",
+      "eyeline_vector": "west_15deg",
+      "axis_reestablished_by_movement": false
+    },
+    "lighting_environmental": {
+      "time_of_day": "NIGHT",
+      "solar_angle": "lunar_storm_zenith",
+      "weather": "cryogenic_mist",
+      "lighting_setup": "Volumetric Split",
+      "color_grade": "Bleach Bypass"
+    },
+    "causal_reveal_flags": [
+      "BEACON_9_HARMONIC_LOCKED",
+      "JOVIAN_SHADOW_COORDINATES_DECRYPTED"
+    ],
+    "invalidated": false
+  },
+  {
+    "ledger_index": 4,
+    "scene_shot_id": "SC03_SH01",
+    "active_cast_wardrobe": {
+      "CHAR_ELENA_VANCE": "WARD_ELENA_EVA_TRENCH",
+      "CHAR_MARCUS_KOREN": "WARD_KOREN_LAB_PARKA"
+    },
+    "dynamic_physical_state": {
+      "CHAR_ELENA_VANCE": [
+        "rain_dampened_collar",
+        "breath_misting",
+        "cryo_frost_on_shoulders",
+        "scorch_mark_right_sleeve",
+        "soot_streaked_forearm",
+        "elevated_respiration"
+      ],
+      "CHAR_MARCUS_KOREN": [
+        "rain_dampened_collar",
+        "breath_misting",
+        "cryo_frost_on_shoulders",
+        "scorch_mark_right_sleeve"
+      ]
+    },
+    "prop_registry_affordance": {
+      "ART_CHRONO_COMPASS": "recovered_scorched"
+    },
+    "spatial_screen_direction": {
+      "axis_id": "AXIS_SC03",
+      "camera_side": "north_of_axis",
+      "subject_facing": "left_to_right",
+      "eyeline_vector": "east_15deg",
+      "axis_reestablished_by_movement": false
+    },
+    "lighting_environmental": {
+      "time_of_day": "NIGHT",
+      "solar_angle": "lunar_storm_zenith",
+      "weather": "cryogenic_mist",
+      "lighting_setup": "Volumetric Split",
+      "color_grade": "Bleach Bypass"
+    },
+    "causal_reveal_flags": [
+      "BEACON_9_HARMONIC_LOCKED",
+      "JOVIAN_SHADOW_COORDINATES_DECRYPTED",
+      "TELEMETRY_PACKET_TRANSMITTED"
+    ],
+    "invalidated": false
+  },
+  {
+    "ledger_index": 5,
+    "scene_shot_id": "SC03_SH02",
+    "active_cast_wardrobe": {
+      "CHAR_ELENA_VANCE": "WARD_ELENA_EVA_TRENCH",
+      "CHAR_MARCUS_KOREN": "WARD_KOREN_LAB_PARKA"
+    },
+    "dynamic_physical_state": {
+      "CHAR_ELENA_VANCE": [
+        "rain_dampened_collar",
+        "breath_misting",
+        "cryo_frost_on_shoulders",
+        "scorch_mark_right_sleeve",
+        "soot_streaked_forearm",
+        "elevated_respiration"
+      ],
+      "CHAR_MARCUS_KOREN": [
+        "rain_dampened_collar",
+        "breath_misting",
+        "cryo_frost_on_shoulders",
+        "scorch_mark_right_sleeve",
+        "soot_streaked_forearm",
+        "elevated_respiration"
+      ]
+    },
+    "prop_registry_affordance": {
+      "ART_CHRONO_COMPASS": "recovered_scorched"
+    },
+    "spatial_screen_direction": {
+      "axis_id": "AXIS_SC03",
+      "camera_side": "north_of_axis",
+      "subject_facing": "right_to_left",
+      "eyeline_vector": "west_15deg",
+      "axis_reestablished_by_movement": false
+    },
+    "lighting_environmental": {
+      "time_of_day": "NIGHT",
+      "solar_angle": "lunar_storm_zenith",
+      "weather": "cryogenic_mist",
+      "lighting_setup": "Volumetric Split",
+      "color_grade": "Bleach Bypass"
+    },
+    "causal_reveal_flags": [
+      "BEACON_9_HARMONIC_LOCKED",
+      "JOVIAN_SHADOW_COORDINATES_DECRYPTED",
+      "TELEMETRY_PACKET_TRANSMITTED"
+    ],
+    "invalidated": false
+  }
+]

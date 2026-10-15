@@ -1,0 +1,308 @@
+[
+  {
+    "shot_id": "SC01_SH01",
+    "scene_context": {
+      "location": "LOC_OBSERVATORY_DOME",
+      "time_of_day": "NIGHT",
+      "environment_state": "Brutalist concrete and brass circular observatory dome, central equatorial telescope mount, condensation on curved steel ribs, glowing CRT azimuth consoles"
+    },
+    "subject": {
+      "character_ref": "CHAR_ELENA_VANCE",
+      "action_core": "Sleet lashes the curved glass of the observatory dome. Commander Elena Vance rotates the brass azimuth vernier until the green CRT waveform stabilizes.",
+      "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+      "wardrobe_id": "WARD_ELENA_EVA_TRENCH",
+      "prop_interactions": [
+        "ART_CHRONO_COMPASS:opened_calibrated"
+      ]
+    },
+    "cinematography": {
+      "framing": "wide",
+      "camera_angle": "eye_level",
+      "camera_movement": "dolly_in",
+      "lens": "24mm_wide",
+      "composition": "180-axis locked (left_to_right), rule-of-thirds framing"
+    },
+    "lighting_and_atmosphere": {
+      "setup": "Chiaroscuro",
+      "color_palette": "Cold cyan and amber instrument glow",
+      "color_grade": "Teal & Orange",
+      "volumetrics": "Cryogenic mist and instrument beam shafts"
+    },
+    "temporal_dynamics": {
+      "duration_seconds": 3.5,
+      "frame_rate": 24,
+      "motion_intensity": 0.65
+    },
+    "consistency_anchors": {
+      "reference_image_uris": [
+        "canon/bible/characters/CHAR_ELENA_VANCE/turnaround_front.png",
+        "canon/bible/locations/LOC_OBSERVATORY_DOME/base_render.png"
+      ],
+      "preserve_elements": [
+        "facial_geometry:CHAR_ELENA_VANCE",
+        "ART_CHRONO_COMPASS",
+        "wardrobe:WARD_ELENA_EVA_TRENCH"
+      ]
+    },
+    "prompt_uuid": "36d984ab-ffc0-43bf-bdbb-7187e052625c",
+    "beat_name": "Catalyst",
+    "dialogue_line": "That carrier wave is repeating on a seven-second harmonic. Unseal the Chrono-Compass.",
+    "dialogue_language": "en-US",
+    "negative_constraints": []
+  },
+  {
+    "shot_id": "SC01_SH02",
+    "scene_context": {
+      "location": "LOC_OBSERVATORY_DOME",
+      "time_of_day": "NIGHT",
+      "environment_state": "Brutalist concrete and brass circular observatory dome, central equatorial telescope mount, condensation on curved steel ribs, glowing CRT azimuth consoles"
+    },
+    "subject": {
+      "character_ref": "CHAR_MARCUS_KOREN",
+      "action_core": "Dr. Marcus Koren steps into the amber console light, adjusting his titanium spectacles as he unlatches the brass compass casing.",
+      "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+      "wardrobe_id": "WARD_KOREN_LAB_PARKA",
+      "prop_interactions": [
+        "ART_CHRONO_COMPASS:opened_calibrated"
+      ]
+    },
+    "cinematography": {
+      "framing": "medium_close_up",
+      "camera_angle": "low_angle",
+      "camera_movement": "static",
+      "lens": "35mm_cinematic",
+      "composition": "180-axis locked (right_to_left), rule-of-thirds framing"
+    },
+    "lighting_and_atmosphere": {
+      "setup": "Chiaroscuro",
+      "color_palette": "Cold cyan and amber instrument glow",
+      "color_grade": "Teal & Orange",
+      "volumetrics": "Cryogenic mist and instrument beam shafts"
+    },
+    "temporal_dynamics": {
+      "duration_seconds": 4.0,
+      "frame_rate": 24,
+      "motion_intensity": 0.45
+    },
+    "consistency_anchors": {
+      "reference_image_uris": [
+        "canon/bible/characters/CHAR_MARCUS_KOREN/turnaround_front.png",
+        "canon/bible/locations/LOC_OBSERVATORY_DOME/base_render.png"
+      ],
+      "preserve_elements": [
+        "facial_geometry:CHAR_MARCUS_KOREN",
+        "ART_CHRONO_COMPASS",
+        "wardrobe:WARD_KOREN_LAB_PARKA"
+      ]
+    },
+    "prompt_uuid": "240e8aee-5049-40ce-9dc9-225103b4633e",
+    "beat_name": "Catalyst",
+    "dialogue_line": "If we route that harmonic through Sub-Level Four, the Directorate sensors will register the spike.",
+    "dialogue_language": "en-US",
+    "negative_constraints": []
+  },
+  {
+    "shot_id": "SC02_SH01",
+    "scene_context": {
+      "location": "LOC_SUBLEVEL_RELAY_VAULT",
+      "time_of_day": "NIGHT",
+      "environment_state": "Subterranean basalt corridor lined with frost-covered waveguide conduits, heavy interlocking pressure doors, amber emergency beacons"
+    },
+    "subject": {
+      "character_ref": "CHAR_ELENA_VANCE",
+      "action_core": "Cryogenic vapor pours across the grated basalt floor of the vault. Elena presses the opened Chrono-Compass into the recessed waveguide socket.",
+      "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+      "wardrobe_id": "WARD_ELENA_EVA_TRENCH",
+      "prop_interactions": [
+        "ART_CHRONO_COMPASS:engaged_in_core"
+      ]
+    },
+    "cinematography": {
+      "framing": "close_up",
+      "camera_angle": "eye_level",
+      "camera_movement": "pan_right",
+      "lens": "85mm_portrait",
+      "composition": "180-axis locked (left_to_right), rule-of-thirds framing"
+    },
+    "lighting_and_atmosphere": {
+      "setup": "Volumetric Split",
+      "color_palette": "Steel blue and sodium vapor orange",
+      "color_grade": "Bleach Bypass",
+      "volumetrics": "Cryogenic mist and instrument beam shafts"
+    },
+    "temporal_dynamics": {
+      "duration_seconds": 3.5,
+      "frame_rate": 24,
+      "motion_intensity": 0.65
+    },
+    "consistency_anchors": {
+      "reference_image_uris": [
+        "canon/bible/characters/CHAR_ELENA_VANCE/turnaround_front.png",
+        "canon/bible/locations/LOC_SUBLEVEL_RELAY_VAULT/base_render.png"
+      ],
+      "preserve_elements": [
+        "facial_geometry:CHAR_ELENA_VANCE",
+        "ART_CHRONO_COMPASS",
+        "wardrobe:WARD_ELENA_EVA_TRENCH"
+      ]
+    },
+    "prompt_uuid": "f4c76459-1dcb-43df-b73b-bcbe48f59333",
+    "beat_name": "Midpoint",
+    "dialogue_line": "The phase lock holds. Read me the origin coordinates before the frost blinds the primary optics.",
+    "dialogue_language": "en-US",
+    "negative_constraints": []
+  },
+  {
+    "shot_id": "SC02_SH02",
+    "scene_context": {
+      "location": "LOC_SUBLEVEL_RELAY_VAULT",
+      "time_of_day": "NIGHT",
+      "environment_state": "Subterranean basalt corridor lined with frost-covered waveguide conduits, heavy interlocking pressure doors, amber emergency beacons"
+    },
+    "subject": {
+      "character_ref": "CHAR_MARCUS_KOREN",
+      "action_core": "Sparks arc across the conduit manifold, leaving a scorch mark along Elena's right forearm sleeve as Koren braces the terminal.",
+      "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+      "wardrobe_id": "WARD_KOREN_LAB_PARKA",
+      "prop_interactions": [
+        "ART_CHRONO_COMPASS:engaged_in_core"
+      ]
+    },
+    "cinematography": {
+      "framing": "medium",
+      "camera_angle": "high_angle",
+      "camera_movement": "tracking",
+      "lens": "50mm_standard",
+      "composition": "180-axis locked (right_to_left), rule-of-thirds framing"
+    },
+    "lighting_and_atmosphere": {
+      "setup": "Volumetric Split",
+      "color_palette": "Steel blue and sodium vapor orange",
+      "color_grade": "Bleach Bypass",
+      "volumetrics": "Cryogenic mist and instrument beam shafts"
+    },
+    "temporal_dynamics": {
+      "duration_seconds": 4.0,
+      "frame_rate": 24,
+      "motion_intensity": 0.65
+    },
+    "consistency_anchors": {
+      "reference_image_uris": [
+        "canon/bible/characters/CHAR_MARCUS_KOREN/turnaround_front.png",
+        "canon/bible/locations/LOC_SUBLEVEL_RELAY_VAULT/base_render.png"
+      ],
+      "preserve_elements": [
+        "facial_geometry:CHAR_MARCUS_KOREN",
+        "ART_CHRONO_COMPASS",
+        "wardrobe:WARD_KOREN_LAB_PARKA"
+      ]
+    },
+    "prompt_uuid": "11f0d1d1-82c6-4cd0-b7fe-b57ab9ad889b",
+    "beat_name": "Midpoint",
+    "dialogue_line": "It isn't an echo. Beacon Nine is broadcasting live from inside the Jovian shadow.",
+    "dialogue_language": "en-US",
+    "negative_constraints": []
+  },
+  {
+    "shot_id": "SC03_SH01",
+    "scene_context": {
+      "location": "LOC_SUBLEVEL_RELAY_VAULT",
+      "time_of_day": "NIGHT",
+      "environment_state": "Subterranean basalt corridor lined with frost-covered waveguide conduits, heavy interlocking pressure doors, amber emergency beacons"
+    },
+    "subject": {
+      "character_ref": "CHAR_ELENA_VANCE",
+      "action_core": "Amber containment beacons spin along the vault ceiling. Elena pulls the scorched Chrono-Compass free and engages the uplink lever as the blast doors begin to close.",
+      "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+      "wardrobe_id": "WARD_ELENA_EVA_TRENCH",
+      "prop_interactions": [
+        "ART_CHRONO_COMPASS:recovered_scorched"
+      ]
+    },
+    "cinematography": {
+      "framing": "wide",
+      "camera_angle": "eye_level",
+      "camera_movement": "dolly_in",
+      "lens": "24mm_wide",
+      "composition": "180-axis locked (left_to_right), rule-of-thirds framing"
+    },
+    "lighting_and_atmosphere": {
+      "setup": "Volumetric Split",
+      "color_palette": "Steel blue and sodium vapor orange",
+      "color_grade": "Bleach Bypass",
+      "volumetrics": "Cryogenic mist and instrument beam shafts"
+    },
+    "temporal_dynamics": {
+      "duration_seconds": 3.5,
+      "frame_rate": 24,
+      "motion_intensity": 0.65
+    },
+    "consistency_anchors": {
+      "reference_image_uris": [
+        "canon/bible/characters/CHAR_ELENA_VANCE/turnaround_front.png",
+        "canon/bible/locations/LOC_SUBLEVEL_RELAY_VAULT/base_render.png"
+      ],
+      "preserve_elements": [
+        "facial_geometry:CHAR_ELENA_VANCE",
+        "ART_CHRONO_COMPASS",
+        "wardrobe:WARD_ELENA_EVA_TRENCH"
+      ]
+    },
+    "prompt_uuid": "4aab4043-47cd-4de7-89e9-7944210dace4",
+    "beat_name": "Finale",
+    "dialogue_line": "Telemetry packet transmitted. Move\u2014through the upper hatch now!",
+    "dialogue_language": "en-US",
+    "negative_constraints": []
+  },
+  {
+    "shot_id": "SC03_SH02",
+    "scene_context": {
+      "location": "LOC_SUBLEVEL_RELAY_VAULT",
+      "time_of_day": "NIGHT",
+      "environment_state": "Subterranean basalt corridor lined with frost-covered waveguide conduits, heavy interlocking pressure doors, amber emergency beacons"
+    },
+    "subject": {
+      "character_ref": "CHAR_MARCUS_KOREN",
+      "action_core": "Amber containment beacons spin along the vault ceiling. Elena pulls the scorched Chrono-Compass free and engages the uplink lever as the blast doors begin to close.",
+      "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+      "wardrobe_id": "WARD_KOREN_LAB_PARKA",
+      "prop_interactions": [
+        "ART_CHRONO_COMPASS:recovered_scorched"
+      ]
+    },
+    "cinematography": {
+      "framing": "medium_close_up",
+      "camera_angle": "low_angle",
+      "camera_movement": "static",
+      "lens": "35mm_cinematic",
+      "composition": "180-axis locked (right_to_left), rule-of-thirds framing"
+    },
+    "lighting_and_atmosphere": {
+      "setup": "Volumetric Split",
+      "color_palette": "Steel blue and sodium vapor orange",
+      "color_grade": "Bleach Bypass",
+      "volumetrics": "Cryogenic mist and instrument beam shafts"
+    },
+    "temporal_dynamics": {
+      "duration_seconds": 4.0,
+      "frame_rate": 24,
+      "motion_intensity": 0.45
+    },
+    "consistency_anchors": {
+      "reference_image_uris": [
+        "canon/bible/characters/CHAR_MARCUS_KOREN/turnaround_front.png",
+        "canon/bible/locations/LOC_SUBLEVEL_RELAY_VAULT/base_render.png"
+      ],
+      "preserve_elements": [
+        "facial_geometry:CHAR_MARCUS_KOREN",
+        "ART_CHRONO_COMPASS",
+        "wardrobe:WARD_KOREN_LAB_PARKA"
+      ]
+    },
+    "prompt_uuid": "3b8230a0-e382-495b-a20c-d18124a1d587",
+    "beat_name": "Finale",
+    "dialogue_line": null,
+    "dialogue_language": "en-US",
+    "negative_constraints": []
+  }
+]

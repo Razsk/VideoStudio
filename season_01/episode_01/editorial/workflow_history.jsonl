@@ -1,0 +1,24 @@
+{"timestamp": 1792072689.1790485, "workflow_id": "wf-s01e01-4f668de5", "event_type": "WORKFLOW_STARTED", "details": {"episode_id": "S01E01", "story_seed": "An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and Dr. Marcus Koren into the Sub-Level 4 Cryogenic Relay Vault."}}
+{"timestamp": 1792072689.2040792, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "research_lore_activity", "attempt": 1}}
+{"timestamp": 1792072689.2110546, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "research_lore_activity", "attempt": 1}}
+{"timestamp": 1792072689.2140803, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "director_activity", "attempt": 1}}
+{"timestamp": 1792072689.2210503, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "director_activity", "attempt": 1}}
+{"timestamp": 1792072689.2270496, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "screenwriter_activity", "attempt": 1}}
+{"timestamp": 1792072689.2370489, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "screenwriter_activity", "attempt": 1}}
+{"timestamp": 1792072689.2440803, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "cinematographer_activity", "attempt": 1}}
+{"timestamp": 1792072689.2750793, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "cinematographer_activity", "attempt": 1}}
+{"timestamp": 1792072689.2830799, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "keyframe_synthesis_activity", "attempt": 1}}
+{"timestamp": 1792072689.435049, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "keyframe_synthesis_activity", "attempt": 1}}
+{"timestamp": 1792072689.4380815, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "vlm_judge_activity", "attempt": 1}}
+{"timestamp": 1792072689.4470496, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "vlm_judge_activity", "attempt": 1}}
+{"timestamp": 1792072689.44905, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "semantic_revision_activity", "attempt": 1}}
+{"timestamp": 1792072689.455048, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "semantic_revision_activity", "attempt": 1}}
+{"timestamp": 1792072689.4580777, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "keyframe_synthesis_activity", "attempt": 1}}
+{"timestamp": 1792072689.573523, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "keyframe_synthesis_activity", "attempt": 1}}
+{"timestamp": 1792072689.5765526, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "vlm_judge_activity", "attempt": 1}}
+{"timestamp": 1792072689.5845532, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "vlm_judge_activity", "attempt": 1}}
+{"timestamp": 1792072689.5925534, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "motion_diffusion_activity", "attempt": 1}}
+{"timestamp": 1792072689.9042785, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "motion_diffusion_activity", "attempt": 1}}
+{"timestamp": 1792072689.9122941, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_STARTED", "details": {"activity": "timeline_assembly_activity", "attempt": 1}}
+{"timestamp": 1792072690.0069253, "workflow_id": "wf-s01e01-4f668de5", "event_type": "ACTIVITY_COMPLETED", "details": {"activity": "timeline_assembly_activity", "attempt": 1}}
+{"timestamp": 1792072690.010955, "workflow_id": "wf-s01e01-4f668de5", "event_type": "WORKFLOW_COMPLETED", "details": {"otio_timeline_path": "season_01/episode_01/editorial/Episode_S01E01_Assembly.otio"}}

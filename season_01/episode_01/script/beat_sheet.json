@@ -1,0 +1,154 @@
+{
+  "episode_id": "S01E01",
+  "framework": "save_the_cat_15",
+  "beats": [
+    {
+      "beat_index": 1,
+      "beat_name": "Opening Image",
+      "summary": "[Opening Image] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 1.",
+      "dramatic_tension": 0.25
+    },
+    {
+      "beat_index": 2,
+      "beat_name": "Theme Stated",
+      "summary": "[Theme Stated] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 2.",
+      "dramatic_tension": 0.3
+    },
+    {
+      "beat_index": 3,
+      "beat_name": "Set-Up",
+      "summary": "[Set-Up] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 3.",
+      "dramatic_tension": 0.35
+    },
+    {
+      "beat_index": 4,
+      "beat_name": "Catalyst",
+      "summary": "[Catalyst] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 4.",
+      "dramatic_tension": 0.55
+    },
+    {
+      "beat_index": 5,
+      "beat_name": "Debate",
+      "summary": "[Debate] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 5.",
+      "dramatic_tension": 0.5
+    },
+    {
+      "beat_index": 6,
+      "beat_name": "Break into Two",
+      "summary": "[Break into Two] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 6.",
+      "dramatic_tension": 0.62
+    },
+    {
+      "beat_index": 7,
+      "beat_name": "B Story",
+      "summary": "[B Story] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 7.",
+      "dramatic_tension": 0.58
+    },
+    {
+      "beat_index": 8,
+      "beat_name": "Fun and Games",
+      "summary": "[Fun and Games] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 8.",
+      "dramatic_tension": 0.66
+    },
+    {
+      "beat_index": 9,
+      "beat_name": "Midpoint",
+      "summary": "[Midpoint] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 9.",
+      "dramatic_tension": 0.8
+    },
+    {
+      "beat_index": 10,
+      "beat_name": "Bad Guys Close In",
+      "summary": "[Bad Guys Close In] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 10.",
+      "dramatic_tension": 0.78
+    },
+    {
+      "beat_index": 11,
+      "beat_name": "All Is Lost",
+      "summary": "[All Is Lost] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 11.",
+      "dramatic_tension": 0.88
+    },
+    {
+      "beat_index": 12,
+      "beat_name": "Dark Night of the Soul",
+      "summary": "[Dark Night of the Soul] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 12.",
+      "dramatic_tension": 0.92
+    },
+    {
+      "beat_index": 13,
+      "beat_name": "Break into Three",
+      "summary": "[Break into Three] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 13.",
+      "dramatic_tension": 0.85
+    },
+    {
+      "beat_index": 14,
+      "beat_name": "Finale",
+      "summary": "[Finale] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 14.",
+      "dramatic_tension": 0.96
+    },
+    {
+      "beat_index": 15,
+      "beat_name": "Final Image",
+      "summary": "[Final Image] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 15.",
+      "dramatic_tension": 0.4
+    }
+  ],
+  "scene_cards": [
+    {
+      "scene_id": "SC01",
+      "beat_name": "Catalyst",
+      "dramatic_objective": "Isolate and lock the anomalous Beacon 9 carrier wave on the observatory azimuth array",
+      "active_obstacle": "Geomagnetic sleet storm and encrypted phase drift",
+      "character_stakes": "Missing the transmission window permanently erases the coordinates",
+      "initial_state": {
+        "relay_lock": "unlocked",
+        "compass_state": "closed_on_belt",
+        "vault_access": "sealed"
+      },
+      "terminal_state": {
+        "relay_lock": "phase_locked",
+        "compass_state": "opened_calibrated",
+        "vault_access": "authorized"
+      },
+      "causal_predecessor_scene_id": null
+    },
+    {
+      "scene_id": "SC02",
+      "beat_name": "Midpoint",
+      "dramatic_objective": "Descend into the Sub-Level 4 Cryogenic Relay Vault and insert the Chrono-Compass",
+      "active_obstacle": "Venting cryogenic nitrogen mist and Koren's concealed override protocol",
+      "character_stakes": "Exposure of the Aether Directorate's sabotage of Beacon 9",
+      "initial_state": {
+        "relay_lock": "phase_locked",
+        "compass_state": "opened_calibrated",
+        "vault_access": "authorized"
+      },
+      "terminal_state": {
+        "relay_lock": "decrypted",
+        "compass_state": "engaged_in_core",
+        "vault_access": "lockdown_triggered"
+      },
+      "causal_predecessor_scene_id": "SC01"
+    },
+    {
+      "scene_id": "SC03",
+      "beat_name": "Finale",
+      "dramatic_objective": "Transmit the decrypted Jovian coordinates before the vault bulkhead seals",
+      "active_obstacle": "Automated containment purge and fracturing waveguide",
+      "character_stakes": "Survival of the Helios Watch crew and preservation of the signal proof",
+      "initial_state": {
+        "relay_lock": "decrypted",
+        "compass_state": "engaged_in_core",
+        "vault_access": "lockdown_triggered"
+      },
+      "terminal_state": {
+        "relay_lock": "broadcast_complete",
+        "compass_state": "recovered_scorched",
+        "vault_access": "escaped_upper_ring"
+      },
+      "causal_predecessor_scene_id": "SC02"
+    }
+  ],
+  "pacing_score": 0.94,
+  "dramatic_curve_valid": true
+}

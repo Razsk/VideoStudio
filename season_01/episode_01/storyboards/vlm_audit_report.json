@@ -1,0 +1,56 @@
+[
+  {
+    "shot_id": "SC01_SH01",
+    "accepted": true,
+    "identity_score": 0.95,
+    "prop_consistency_ok": true,
+    "wardrobe_consistency_ok": true,
+    "screen_direction_ok": true,
+    "revision_delta": null
+  },
+  {
+    "shot_id": "SC01_SH02",
+    "accepted": true,
+    "identity_score": 0.91,
+    "prop_consistency_ok": true,
+    "wardrobe_consistency_ok": true,
+    "screen_direction_ok": true,
+    "revision_delta": null
+  },
+  {
+    "shot_id": "SC02_SH01",
+    "accepted": true,
+    "identity_score": 0.91,
+    "prop_consistency_ok": true,
+    "wardrobe_consistency_ok": true,
+    "screen_direction_ok": true,
+    "revision_delta": null
+  },
+  {
+    "shot_id": "SC02_SH02",
+    "accepted": true,
+    "identity_score": 0.91,
+    "prop_consistency_ok": true,
+    "wardrobe_consistency_ok": true,
+    "screen_direction_ok": true,
+    "revision_delta": null
+  },
+  {
+    "shot_id": "SC03_SH01",
+    "accepted": true,
+    "identity_score": 0.91,
+    "prop_consistency_ok": true,
+    "wardrobe_consistency_ok": true,
+    "screen_direction_ok": true,
+    "revision_delta": null
+  },
+  {
+    "shot_id": "SC03_SH02",
+    "accepted": true,
+    "identity_score": 0.91,
+    "prop_consistency_ok": true,
+    "wardrobe_consistency_ok": true,
+    "screen_direction_ok": true,
+    "revision_delta": null
+  }
+]

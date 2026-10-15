@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "videostudio"
+version = "1.0.0"
+description = "Automated Episodic Video Generation: End-to-End Narrative Synthesis, Continuity Tracking, and Production Orchestration"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0.0",
+    "jsonschema>=4.18.0",
+    "pyarrow>=14.0.0",
+    "opentimelineio>=0.16.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "httpx>=0.24.0",
+    "networkx>=3.0",
+    "pillow>=10.0.0",
+    "temporalio>=1.5.0",
+    "langgraph>=0.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+]
+
+[project.scripts]
+videostudio = "videostudio.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

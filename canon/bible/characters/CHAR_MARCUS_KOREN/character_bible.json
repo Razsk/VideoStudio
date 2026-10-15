@@ -1,0 +1,23 @@
+{
+  "character_id": "CHAR_MARCUS_KOREN",
+  "name": "Dr. Marcus Koren",
+  "bone_structure": "Angular temporal bone, narrow nasal bridge, prominent chin",
+  "facial_geometry": "Long diamond face, deep nasolabial folds",
+  "facial_proportions": "Slightly elongated middle third, narrow-set eyes",
+  "eye_shape_and_color": "Deep-set hazel-green eyes behind rimless titanium spectacles",
+  "ethnic_phenotype": "Central European complexion with silver-streaked beard",
+  "baseline_hair_texture": "Fine iron-grey hair swept back from temples",
+  "physical_height": "183cm",
+  "turnaround_plates": {
+    "front": "canon/bible/characters/CHAR_MARCUS_KOREN/turnaround_front.png",
+    "angle_45": "canon/bible/characters/CHAR_MARCUS_KOREN/turnaround_45.png",
+    "profile": "canon/bible/characters/CHAR_MARCUS_KOREN/turnaround_profile.png"
+  },
+  "lora_weights_uri": "canon/bible/characters/CHAR_MARCUS_KOREN/marcus_koren_v1.safetensors",
+  "costume_variants": {
+    "WARD_KOREN_LAB_PARKA": "Thermal graphite lab coat with copper dosimeter badge",
+    "WARD_KOREN_HAZMAT": "Amber-visored atmospheric excursion suit"
+  },
+  "voice_profile": "baritone_resonant_guarded",
+  "invariant_sha256": "c8dd8804605dbfbf91de5c77518903bbff819ff12d0828348538525ae29fe58c"
+}

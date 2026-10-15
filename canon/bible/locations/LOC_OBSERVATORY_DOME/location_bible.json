@@ -1,0 +1,10 @@
+{
+  "location_id": "LOC_OBSERVATORY_DOME",
+  "name": "Helios Deep-Space Observatory Dome",
+  "spatial_coordinates": "LAT +64.12 LON -21.89 ALT 2400M",
+  "architectural_prompt_card": "Brutalist concrete and brass circular observatory dome, central equatorial telescope mount, condensation on curved steel ribs, glowing CRT azimuth consoles",
+  "base_environment_render_uri": "canon/bible/locations/LOC_OBSERVATORY_DOME/base_render.png",
+  "default_lighting_setup": "Chiaroscuro",
+  "default_color_palette": "Cold cyan and amber instrument glow",
+  "default_color_grade": "Teal & Orange"
+}

@@ -1,0 +1,1276 @@
+{
+  "workflow_id": "wf-s01e01-4f668de5",
+  "episode_id": "S01E01",
+  "season": 1,
+  "episode": 1,
+  "story_seed": "An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and Dr. Marcus Koren into the Sub-Level 4 Cryogenic Relay Vault.",
+  "season_arc": "The Jovian Shadow Conspiracy",
+  "status": "COMPLETED",
+  "completed_phases": [
+    "phase_1_narrative_inception",
+    "phase_2_script_and_continuity",
+    "phase_3_cinematography",
+    "phase_4_keyframe_and_vlm_gate",
+    "phase_5_motion_diffusion",
+    "phase_6_timeline_assembly"
+  ],
+  "pending_gate": null,
+  "human_approvals": {},
+  "graph_state": {
+    "episode_id": "S01E01",
+    "season": 1,
+    "episode": 1,
+    "story_seed": "An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and Dr. Marcus Koren into the Sub-Level 4 Cryogenic Relay Vault.",
+    "season_arc": "The Jovian Shadow Conspiracy",
+    "simulate_drift_shots": [
+      "SC01_SH01"
+    ],
+    "semantic_loop_iterations": 1,
+    "audit_trail": [
+      {
+        "timestamp": 1792072689.2110546,
+        "node": "research_lore",
+        "phase": "I. Narrative Inception",
+        "detail": "Compiled Thematic Dossier (Setting Adherence=0.96)",
+        "payload": {
+          "setting_adherence_score": 0.96
+        }
+      },
+      {
+        "timestamp": 1792072689.2210503,
+        "node": "director",
+        "phase": "I. Narrative Inception",
+        "detail": "Constructed 15-Beat Structural Matrix & 3 causally linked Scene Cards (Pacing=0.94)",
+        "payload": {
+          "pacing_score": 0.94,
+          "beats": 15
+        }
+      },
+      {
+        "timestamp": 1792072689.2370489,
+        "node": "screenwriter",
+        "phase": "II. Script & Continuity",
+        "detail": "Drafted ScreenJSON AST & Fountain script across 3 scenes",
+        "payload": {
+          "dialogue_naturalism_score": 0.95
+        }
+      },
+      {
+        "timestamp": 1792072689.2750793,
+        "node": "cinematographer",
+        "phase": "III. Cinematography",
+        "detail": "Validated 6 CinematicShotSpecifications (Draft 2020-12) & locked Continuity Ledger Parquet",
+        "payload": {
+          "shot_count": 6
+        }
+      },
+      {
+        "timestamp": 1792072689.435049,
+        "node": "keyframe_synthesis",
+        "phase": "IV. Keyframe Synthesis",
+        "detail": "Synthesized 6 keyframes across 3 Shared-Attention Scene Grids (rev=0)",
+        "payload": {
+          "keyframes": 6,
+          "revision": 0
+        }
+      },
+      {
+        "timestamp": 1792072689.4470496,
+        "node": "vlm_judge",
+        "phase": "IV. Keyframe Synthesis",
+        "detail": "Rejected 1 keyframes (SC01_SH01); routing to Semantic Loop",
+        "payload": {
+          "rejected_shot_ids": [
+            "SC01_SH01"
+          ]
+        }
+      },
+      {
+        "timestamp": 1792072689.455048,
+        "node": "semantic_revision",
+        "phase": "IV. Semantic Loop Rollback",
+        "detail": "Applied RevisionDelta negative constraints & LoRA locks for 1 shots (iteration 1)",
+        "payload": {
+          "iteration": 1
+        }
+      },
+      {
+        "timestamp": 1792072689.573523,
+        "node": "keyframe_synthesis",
+        "phase": "IV. Keyframe Synthesis",
+        "detail": "Synthesized 6 keyframes across 3 Shared-Attention Scene Grids (rev=1)",
+        "payload": {
+          "keyframes": 6,
+          "revision": 1
+        }
+      },
+      {
+        "timestamp": 1792072689.5845532,
+        "node": "vlm_judge",
+        "phase": "IV. Keyframe Synthesis",
+        "detail": "All 6 keyframes passed VLM Continuity Gate (Score_ID >= 0.85)",
+        "payload": {
+          "rejected_shot_ids": []
+        }
+      },
+      {
+        "timestamp": 1792072689.9042785,
+        "node": "motion_diffusion",
+        "phase": "V. Motion Diffusion",
+        "detail": "Rendered 6 I2V master video clips & TTS dialogue WAV stems (frame-stepping passed)",
+        "payload": {
+          "clips": 6
+        }
+      },
+      {
+        "timestamp": 1792072690.0069253,
+        "node": "timeline_assembly",
+        "phase": "VI. Timeline Assembly",
+        "detail": "Exported OpenTimelineIO master container (Episode_S01E01_Assembly.otio, 22.5s)",
+        "payload": {
+          "otio_path": "season_01/episode_01/editorial/Episode_S01E01_Assembly.otio"
+        }
+      }
+    ],
+    "thematic_dossier": {
+      "episode_id": "S01E01",
+      "story_seed": "An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and Dr. Marcus Koren into the Sub-Level 4 Cryogenic Relay Vault.",
+      "premise": "When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and Dr. Marcus Koren into the Sub-Level 4 Cryogenic Relay Vault, Commander Elena Vance and Dr. Marcus Koren must verify the anomalous carrier wave inside the Sub-Level 4 Cryogenic Relay Vault before orbital containment seals the dome.",
+      "tone": "Tactile analog-futurist sci-fi thriller with chiaroscuro tension",
+      "target_conflicts": [
+        "Institutional secrecy vs. empirical truth over Beacon 9 telemetry",
+        "Sub-polar environmental hazard threatening dome structural integrity",
+        "Asymmetric knowledge between Koren and Vance regarding the Ghost Telemetry"
+      ],
+      "immutable_facts": [
+        "Season Arc: The Jovian Shadow Conspiracy",
+        "Commander Elena Vance commands the Helios Deep-Space Observatory Dome.",
+        "Dr. Marcus Koren holds dual allegiance with the Aether Directorate.",
+        "Accessible artifacts at episode start: ART_CHRONO_COMPASS"
+      ],
+      "lore_entities_referenced": [
+        "CHAR_ELENA_VANCE",
+        "CHAR_MARCUS_KOREN",
+        "LOC_OBSERVATORY_DOME",
+        "LOC_SUBLEVEL_RELAY_VAULT",
+        "ART_CHRONO_COMPASS",
+        "SECRET_GHOST_TELEMETRY"
+      ],
+      "tonal_precedents": [
+        "Claustrophobic subterranean industrial descent: venting cryo-steam, bleach-bypass sodium lighting, footsteps echoing on grated catwalks.",
+        "Tactile analog-futurist sci-fi tension: brass dials, rain-streaked glass, chiaroscuro instrument lighting, clipped dialogue heavy with subtext."
+      ],
+      "setting_adherence_score": 0.96
+    },
+    "beat_sheet": {
+      "episode_id": "S01E01",
+      "framework": "save_the_cat_15",
+      "beats": [
+        {
+          "beat_index": 1,
+          "beat_name": "Opening Image",
+          "summary": "[Opening Image] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 1.",
+          "dramatic_tension": 0.25
+        },
+        {
+          "beat_index": 2,
+          "beat_name": "Theme Stated",
+          "summary": "[Theme Stated] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 2.",
+          "dramatic_tension": 0.3
+        },
+        {
+          "beat_index": 3,
+          "beat_name": "Set-Up",
+          "summary": "[Set-Up] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 3.",
+          "dramatic_tension": 0.35
+        },
+        {
+          "beat_index": 4,
+          "beat_name": "Catalyst",
+          "summary": "[Catalyst] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 4.",
+          "dramatic_tension": 0.55
+        },
+        {
+          "beat_index": 5,
+          "beat_name": "Debate",
+          "summary": "[Debate] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 5.",
+          "dramatic_tension": 0.5
+        },
+        {
+          "beat_index": 6,
+          "beat_name": "Break into Two",
+          "summary": "[Break into Two] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 6.",
+          "dramatic_tension": 0.62
+        },
+        {
+          "beat_index": 7,
+          "beat_name": "B Story",
+          "summary": "[B Story] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 7.",
+          "dramatic_tension": 0.58
+        },
+        {
+          "beat_index": 8,
+          "beat_name": "Fun and Games",
+          "summary": "[Fun and Games] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 8.",
+          "dramatic_tension": 0.66
+        },
+        {
+          "beat_index": 9,
+          "beat_name": "Midpoint",
+          "summary": "[Midpoint] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 9.",
+          "dramatic_tension": 0.8
+        },
+        {
+          "beat_index": 10,
+          "beat_name": "Bad Guys Close In",
+          "summary": "[Bad Guys Close In] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 10.",
+          "dramatic_tension": 0.78
+        },
+        {
+          "beat_index": 11,
+          "beat_name": "All Is Lost",
+          "summary": "[All Is Lost] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 11.",
+          "dramatic_tension": 0.88
+        },
+        {
+          "beat_index": 12,
+          "beat_name": "Dark Night of the Soul",
+          "summary": "[Dark Night of the Soul] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 12.",
+          "dramatic_tension": 0.92
+        },
+        {
+          "beat_index": 13,
+          "beat_name": "Break into Three",
+          "summary": "[Break into Three] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 13.",
+          "dramatic_tension": 0.85
+        },
+        {
+          "beat_index": 14,
+          "beat_name": "Finale",
+          "summary": "[Finale] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 14.",
+          "dramatic_tension": 0.96
+        },
+        {
+          "beat_index": 15,
+          "beat_name": "Final Image",
+          "summary": "[Final Image] When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and D \u2014 dramatic pivot 15.",
+          "dramatic_tension": 0.4
+        }
+      ],
+      "scene_cards": [
+        {
+          "scene_id": "SC01",
+          "beat_name": "Catalyst",
+          "dramatic_objective": "Isolate and lock the anomalous Beacon 9 carrier wave on the observatory azimuth array",
+          "active_obstacle": "Geomagnetic sleet storm and encrypted phase drift",
+          "character_stakes": "Missing the transmission window permanently erases the coordinates",
+          "initial_state": {
+            "relay_lock": "unlocked",
+            "compass_state": "closed_on_belt",
+            "vault_access": "sealed"
+          },
+          "terminal_state": {
+            "relay_lock": "phase_locked",
+            "compass_state": "opened_calibrated",
+            "vault_access": "authorized"
+          },
+          "causal_predecessor_scene_id": null
+        },
+        {
+          "scene_id": "SC02",
+          "beat_name": "Midpoint",
+          "dramatic_objective": "Descend into the Sub-Level 4 Cryogenic Relay Vault and insert the Chrono-Compass",
+          "active_obstacle": "Venting cryogenic nitrogen mist and Koren's concealed override protocol",
+          "character_stakes": "Exposure of the Aether Directorate's sabotage of Beacon 9",
+          "initial_state": {
+            "relay_lock": "phase_locked",
+            "compass_state": "opened_calibrated",
+            "vault_access": "authorized"
+          },
+          "terminal_state": {
+            "relay_lock": "decrypted",
+            "compass_state": "engaged_in_core",
+            "vault_access": "lockdown_triggered"
+          },
+          "causal_predecessor_scene_id": "SC01"
+        },
+        {
+          "scene_id": "SC03",
+          "beat_name": "Finale",
+          "dramatic_objective": "Transmit the decrypted Jovian coordinates before the vault bulkhead seals",
+          "active_obstacle": "Automated containment purge and fracturing waveguide",
+          "character_stakes": "Survival of the Helios Watch crew and preservation of the signal proof",
+          "initial_state": {
+            "relay_lock": "decrypted",
+            "compass_state": "engaged_in_core",
+            "vault_access": "lockdown_triggered"
+          },
+          "terminal_state": {
+            "relay_lock": "broadcast_complete",
+            "compass_state": "recovered_scorched",
+            "vault_access": "escaped_upper_ring"
+          },
+          "causal_predecessor_scene_id": "SC02"
+        }
+      ],
+      "pacing_score": 0.94,
+      "dramatic_curve_valid": true
+    },
+    "screenjson": {
+      "episode_id": "S01E01",
+      "title": "Episode S01E01: The Azimuth Signal",
+      "author": "VideoStudio Multi-Agent Pipeline",
+      "scenes": [
+        {
+          "scene_id": "SC01",
+          "uuid": "38fae0f5-296e-4e65-ae63-4782dc76c578",
+          "beat_name": "Catalyst",
+          "heading": {
+            "element_type": "scene_heading",
+            "uuid": "de563ef3-a36c-4aaa-81b7-264cd4d141bb",
+            "context": "INT",
+            "setting": "Helios Deep-Space Observatory Dome",
+            "time_of_day": "NIGHT",
+            "lighting_lock": "Chiaroscuro",
+            "color_palette_lock": "Teal & Orange"
+          },
+          "elements": [
+            {
+              "element_type": "action",
+              "uuid": "66efbec6-d7c0-41d7-8aae-25b39c390c60",
+              "description": "Sleet lashes the curved glass of the observatory dome. Commander Elena Vance rotates the brass azimuth vernier until the green CRT waveform stabilizes."
+            },
+            {
+              "element_type": "character",
+              "uuid": "7e24541e-0dd8-47c6-90a1-58efb37d5a66",
+              "character_id": "CHAR_ELENA_VANCE",
+              "name": "ELENA VANCE",
+              "base_bible_anchor_key": "canon/bible/characters/CHAR_ELENA_VANCE"
+            },
+            {
+              "element_type": "parenthetical",
+              "uuid": "91541236-a58d-4bc8-8e93-158022ea3e3d",
+              "micro_expression": "eyes fixed on the oscilloscope, jaw set",
+              "emotional_cadence": "low, measured urgency"
+            },
+            {
+              "element_type": "dialogue",
+              "uuid": "f9398417-4b69-4e0f-a758-17ace469ee56",
+              "character_id": "CHAR_ELENA_VANCE",
+              "spoken_string": "That carrier wave is repeating on a seven-second harmonic. Unseal the Chrono-Compass.",
+              "language_identifier": "en-US"
+            },
+            {
+              "element_type": "action",
+              "uuid": "dedd4d06-495a-4aed-ba9a-888aaa9f07bd",
+              "description": "Dr. Marcus Koren steps into the amber console light, adjusting his titanium spectacles as he unlatches the brass compass casing."
+            },
+            {
+              "element_type": "character",
+              "uuid": "e46ff665-f9ac-4a4a-b245-e694a5cbe99f",
+              "character_id": "CHAR_MARCUS_KOREN",
+              "name": "DR. MARCUS KOREN",
+              "base_bible_anchor_key": "canon/bible/characters/CHAR_MARCUS_KOREN"
+            },
+            {
+              "element_type": "parenthetical",
+              "uuid": "4d521ddd-e8d8-4e25-ba6a-a47ef1c48d5c",
+              "micro_expression": "glancing toward the pressure bulkhead",
+              "emotional_cadence": "guarded, hesitant"
+            },
+            {
+              "element_type": "dialogue",
+              "uuid": "0489b5d4-850e-4c49-a8ec-102bb44f03cb",
+              "character_id": "CHAR_MARCUS_KOREN",
+              "spoken_string": "If we route that harmonic through Sub-Level Four, the Directorate sensors will register the spike.",
+              "language_identifier": "en-US"
+            },
+            {
+              "element_type": "transition",
+              "uuid": "95b3b445-bfa3-42ff-b816-8c9e3cb68a31",
+              "transition_type": "CUT TO:"
+            }
+          ],
+          "initial_state": {
+            "relay_lock": "unlocked",
+            "compass_state": "closed_on_belt",
+            "vault_access": "sealed"
+          },
+          "terminal_state": {
+            "relay_lock": "phase_locked",
+            "compass_state": "opened_calibrated",
+            "vault_access": "authorized"
+          }
+        },
+        {
+          "scene_id": "SC02",
+          "uuid": "f50c0905-b0b0-4747-85b5-6ba1e4dc0dd5",
+          "beat_name": "Midpoint",
+          "heading": {
+            "element_type": "scene_heading",
+            "uuid": "3facffc0-ebb3-4224-85b8-295d29569bf1",
+            "context": "INT",
+            "setting": "Sub-Level 4 Cryogenic Relay Vault",
+            "time_of_day": "NIGHT",
+            "lighting_lock": "Volumetric Split",
+            "color_palette_lock": "Bleach Bypass"
+          },
+          "elements": [
+            {
+              "element_type": "action",
+              "uuid": "86e0d2bf-8573-473d-b5ac-446319339b57",
+              "description": "Cryogenic vapor pours across the grated basalt floor of the vault. Elena presses the opened Chrono-Compass into the recessed waveguide socket."
+            },
+            {
+              "element_type": "character",
+              "uuid": "0e84a1cc-e73c-48ca-bbcd-605bf416632f",
+              "character_id": "CHAR_ELENA_VANCE",
+              "name": "ELENA VANCE",
+              "base_bible_anchor_key": "canon/bible/characters/CHAR_ELENA_VANCE"
+            },
+            {
+              "element_type": "parenthetical",
+              "uuid": "39dcbeff-f89b-4b27-b3fb-6df0f0def7d4",
+              "micro_expression": "breath misting in the cold, brow furrowed",
+              "emotional_cadence": "resolute"
+            },
+            {
+              "element_type": "dialogue",
+              "uuid": "eb3619a4-cecc-4745-b6c8-0862a9f1c21f",
+              "character_id": "CHAR_ELENA_VANCE",
+              "spoken_string": "The phase lock holds. Read me the origin coordinates before the frost blinds the primary optics.",
+              "language_identifier": "en-US"
+            },
+            {
+              "element_type": "action",
+              "uuid": "b3b615ea-7b2f-433e-b958-60aff1c1716e",
+              "description": "Sparks arc across the conduit manifold, leaving a scorch mark along Elena's right forearm sleeve as Koren braces the terminal."
+            },
+            {
+              "element_type": "character",
+              "uuid": "36b0e5f7-e07b-4026-8596-21640c7a1889",
+              "character_id": "CHAR_MARCUS_KOREN",
+              "name": "DR. MARCUS KOREN",
+              "base_bible_anchor_key": "canon/bible/characters/CHAR_MARCUS_KOREN"
+            },
+            {
+              "element_type": "parenthetical",
+              "uuid": "371cb09f-2ccc-4c98-bdd1-f5b66a2ac84a",
+              "micro_expression": "eyes widening behind fogged lenses",
+              "emotional_cadence": "stunned realization"
+            },
+            {
+              "element_type": "dialogue",
+              "uuid": "b3bfc2ad-c5ad-430e-8a58-f9ea09dc59fc",
+              "character_id": "CHAR_MARCUS_KOREN",
+              "spoken_string": "It isn't an echo. Beacon Nine is broadcasting live from inside the Jovian shadow.",
+              "language_identifier": "en-US"
+            },
+            {
+              "element_type": "transition",
+              "uuid": "7b88c87b-9f3c-4135-a429-e472332f8eb9",
+              "transition_type": "DISSOLVE TO:"
+            }
+          ],
+          "initial_state": {
+            "relay_lock": "phase_locked",
+            "compass_state": "opened_calibrated",
+            "vault_access": "authorized"
+          },
+          "terminal_state": {
+            "relay_lock": "decrypted",
+            "compass_state": "engaged_in_core",
+            "vault_access": "lockdown_triggered"
+          }
+        },
+        {
+          "scene_id": "SC03",
+          "uuid": "04702f1d-4104-4938-8b92-ce3183c659d4",
+          "beat_name": "Finale",
+          "heading": {
+            "element_type": "scene_heading",
+            "uuid": "d29a0a21-df54-4c69-97f5-0e1ee8786d24",
+            "context": "INT",
+            "setting": "Sub-Level 4 Cryogenic Relay Vault",
+            "time_of_day": "NIGHT",
+            "lighting_lock": "Volumetric Split",
+            "color_palette_lock": "Bleach Bypass"
+          },
+          "elements": [
+            {
+              "element_type": "action",
+              "uuid": "2ac21f12-03ca-4ab1-977e-23e69324b0a4",
+              "description": "Amber containment beacons spin along the vault ceiling. Elena pulls the scorched Chrono-Compass free and engages the uplink lever as the blast doors begin to close."
+            },
+            {
+              "element_type": "character",
+              "uuid": "bd794c70-61d5-463c-90ed-269c5767da81",
+              "character_id": "CHAR_ELENA_VANCE",
+              "name": "ELENA VANCE",
+              "base_bible_anchor_key": "canon/bible/characters/CHAR_ELENA_VANCE"
+            },
+            {
+              "element_type": "parenthetical",
+              "uuid": "cbedea23-8e91-4726-9563-4206389d619b",
+              "micro_expression": "flinching against the sodium glare, resolute",
+              "emotional_cadence": "commanding"
+            },
+            {
+              "element_type": "dialogue",
+              "uuid": "cca46a0f-e8c7-4a61-9b07-1a06fff7b748",
+              "character_id": "CHAR_ELENA_VANCE",
+              "spoken_string": "Telemetry packet transmitted. Move\u2014through the upper hatch now!",
+              "language_identifier": "en-US"
+            },
+            {
+              "element_type": "transition",
+              "uuid": "b4051586-ed04-4837-b69b-3da8b638718b",
+              "transition_type": "FADE OUT:"
+            }
+          ],
+          "initial_state": {
+            "relay_lock": "decrypted",
+            "compass_state": "engaged_in_core",
+            "vault_access": "lockdown_triggered"
+          },
+          "terminal_state": {
+            "relay_lock": "broadcast_complete",
+            "compass_state": "recovered_scorched",
+            "vault_access": "escaped_upper_ring"
+          }
+        }
+      ],
+      "dialogue_naturalism_score": 0.95,
+      "subtext_faithfulness_score": 0.93
+    },
+    "fountain_script": "Title: Episode S01E01: The Azimuth Signal\nCredit: Written by\nAuthor: VideoStudio Multi-Agent Pipeline\nDraft date: Episode S01E01\n\n====\nINT. HELIOS DEEP-SPACE OBSERVATORY DOME - NIGHT\n\nSleet lashes the curved glass of the observatory dome. Commander Elena Vance rotates the brass azimuth vernier until the green CRT waveform stabilizes.\n\nELENA VANCE\n(eyes fixed on the oscilloscope, jaw set; low, measured urgency)\nThat carrier wave is repeating on a seven-second harmonic. Unseal the Chrono-Compass.\n\nDr. Marcus Koren steps into the amber console light, adjusting his titanium spectacles as he unlatches the brass compass casing.\n\nDR. MARCUS KOREN\n(glancing toward the pressure bulkhead; guarded, hesitant)\nIf we route that harmonic through Sub-Level Four, the Directorate sensors will register the spike.\n\n> CUT TO:\n\nINT. SUB-LEVEL 4 CRYOGENIC RELAY VAULT - NIGHT\n\nCryogenic vapor pours across the grated basalt floor of the vault. Elena presses the opened Chrono-Compass into the recessed waveguide socket.\n\nELENA VANCE\n(breath misting in the cold, brow furrowed; resolute)\nThe phase lock holds. Read me the origin coordinates before the frost blinds the primary optics.\n\nSparks arc across the conduit manifold, leaving a scorch mark along Elena's right forearm sleeve as Koren braces the terminal.\n\nDR. MARCUS KOREN\n(eyes widening behind fogged lenses; stunned realization)\nIt isn't an echo. Beacon Nine is broadcasting live from inside the Jovian shadow.\n\n> DISSOLVE TO:\n\nINT. SUB-LEVEL 4 CRYOGENIC RELAY VAULT - NIGHT\n\nAmber containment beacons spin along the vault ceiling. Elena pulls the scorched Chrono-Compass free and engages the uplink lever as the blast doors begin to close.\n\nELENA VANCE\n(flinching against the sodium glare, resolute; commanding)\nTelemetry packet transmitted. Move\u2014through the upper hatch now!\n\n> FADE OUT:\n",
+    "shot_specs": [
+      {
+        "shot_id": "SC01_SH01",
+        "scene_context": {
+          "location": "LOC_OBSERVATORY_DOME",
+          "time_of_day": "NIGHT",
+          "environment_state": "Brutalist concrete and brass circular observatory dome, central equatorial telescope mount, condensation on curved steel ribs, glowing CRT azimuth consoles"
+        },
+        "subject": {
+          "character_ref": "CHAR_ELENA_VANCE",
+          "action_core": "Sleet lashes the curved glass of the observatory dome. Commander Elena Vance rotates the brass azimuth vernier until the green CRT waveform stabilizes.",
+          "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+          "wardrobe_id": "WARD_ELENA_EVA_TRENCH",
+          "prop_interactions": [
+            "ART_CHRONO_COMPASS:opened_calibrated"
+          ]
+        },
+        "cinematography": {
+          "framing": "wide",
+          "camera_angle": "eye_level",
+          "camera_movement": "dolly_in",
+          "lens": "24mm_wide",
+          "composition": "180-axis locked (left_to_right), rule-of-thirds framing"
+        },
+        "lighting_and_atmosphere": {
+          "setup": "Chiaroscuro",
+          "color_palette": "Cold cyan and amber instrument glow",
+          "color_grade": "Teal & Orange",
+          "volumetrics": "Cryogenic mist and instrument beam shafts"
+        },
+        "temporal_dynamics": {
+          "duration_seconds": 3.5,
+          "frame_rate": 24,
+          "motion_intensity": 0.65
+        },
+        "consistency_anchors": {
+          "reference_image_uris": [
+            "canon/bible/characters/CHAR_ELENA_VANCE/turnaround_front.png",
+            "canon/bible/locations/LOC_OBSERVATORY_DOME/base_render.png"
+          ],
+          "preserve_elements": [
+            "facial_geometry:CHAR_ELENA_VANCE",
+            "ART_CHRONO_COMPASS",
+            "wardrobe:WARD_ELENA_EVA_TRENCH"
+          ]
+        },
+        "prompt_uuid": "36d984ab-ffc0-43bf-bdbb-7187e052625c",
+        "beat_name": "Catalyst",
+        "dialogue_line": "That carrier wave is repeating on a seven-second harmonic. Unseal the Chrono-Compass.",
+        "dialogue_language": "en-US",
+        "negative_constraints": [
+          "lock_character_lora",
+          "prevent_facial_drift",
+          "prevent_costume_mutation"
+        ]
+      },
+      {
+        "shot_id": "SC01_SH02",
+        "scene_context": {
+          "location": "LOC_OBSERVATORY_DOME",
+          "time_of_day": "NIGHT",
+          "environment_state": "Brutalist concrete and brass circular observatory dome, central equatorial telescope mount, condensation on curved steel ribs, glowing CRT azimuth consoles"
+        },
+        "subject": {
+          "character_ref": "CHAR_MARCUS_KOREN",
+          "action_core": "Dr. Marcus Koren steps into the amber console light, adjusting his titanium spectacles as he unlatches the brass compass casing.",
+          "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+          "wardrobe_id": "WARD_KOREN_LAB_PARKA",
+          "prop_interactions": [
+            "ART_CHRONO_COMPASS:opened_calibrated"
+          ]
+        },
+        "cinematography": {
+          "framing": "medium_close_up",
+          "camera_angle": "low_angle",
+          "camera_movement": "static",
+          "lens": "35mm_cinematic",
+          "composition": "180-axis locked (right_to_left), rule-of-thirds framing"
+        },
+        "lighting_and_atmosphere": {
+          "setup": "Chiaroscuro",
+          "color_palette": "Cold cyan and amber instrument glow",
+          "color_grade": "Teal & Orange",
+          "volumetrics": "Cryogenic mist and instrument beam shafts"
+        },
+        "temporal_dynamics": {
+          "duration_seconds": 4.0,
+          "frame_rate": 24,
+          "motion_intensity": 0.45
+        },
+        "consistency_anchors": {
+          "reference_image_uris": [
+            "canon/bible/characters/CHAR_MARCUS_KOREN/turnaround_front.png",
+            "canon/bible/locations/LOC_OBSERVATORY_DOME/base_render.png"
+          ],
+          "preserve_elements": [
+            "facial_geometry:CHAR_MARCUS_KOREN",
+            "ART_CHRONO_COMPASS",
+            "wardrobe:WARD_KOREN_LAB_PARKA"
+          ]
+        },
+        "prompt_uuid": "240e8aee-5049-40ce-9dc9-225103b4633e",
+        "beat_name": "Catalyst",
+        "dialogue_line": "If we route that harmonic through Sub-Level Four, the Directorate sensors will register the spike.",
+        "dialogue_language": "en-US",
+        "negative_constraints": []
+      },
+      {
+        "shot_id": "SC02_SH01",
+        "scene_context": {
+          "location": "LOC_SUBLEVEL_RELAY_VAULT",
+          "time_of_day": "NIGHT",
+          "environment_state": "Subterranean basalt corridor lined with frost-covered waveguide conduits, heavy interlocking pressure doors, amber emergency beacons"
+        },
+        "subject": {
+          "character_ref": "CHAR_ELENA_VANCE",
+          "action_core": "Cryogenic vapor pours across the grated basalt floor of the vault. Elena presses the opened Chrono-Compass into the recessed waveguide socket.",
+          "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+          "wardrobe_id": "WARD_ELENA_EVA_TRENCH",
+          "prop_interactions": [
+            "ART_CHRONO_COMPASS:engaged_in_core"
+          ]
+        },
+        "cinematography": {
+          "framing": "close_up",
+          "camera_angle": "eye_level",
+          "camera_movement": "pan_right",
+          "lens": "85mm_portrait",
+          "composition": "180-axis locked (left_to_right), rule-of-thirds framing"
+        },
+        "lighting_and_atmosphere": {
+          "setup": "Volumetric Split",
+          "color_palette": "Steel blue and sodium vapor orange",
+          "color_grade": "Bleach Bypass",
+          "volumetrics": "Cryogenic mist and instrument beam shafts"
+        },
+        "temporal_dynamics": {
+          "duration_seconds": 3.5,
+          "frame_rate": 24,
+          "motion_intensity": 0.65
+        },
+        "consistency_anchors": {
+          "reference_image_uris": [
+            "canon/bible/characters/CHAR_ELENA_VANCE/turnaround_front.png",
+            "canon/bible/locations/LOC_SUBLEVEL_RELAY_VAULT/base_render.png"
+          ],
+          "preserve_elements": [
+            "facial_geometry:CHAR_ELENA_VANCE",
+            "ART_CHRONO_COMPASS",
+            "wardrobe:WARD_ELENA_EVA_TRENCH"
+          ]
+        },
+        "prompt_uuid": "f4c76459-1dcb-43df-b73b-bcbe48f59333",
+        "beat_name": "Midpoint",
+        "dialogue_line": "The phase lock holds. Read me the origin coordinates before the frost blinds the primary optics.",
+        "dialogue_language": "en-US",
+        "negative_constraints": []
+      },
+      {
+        "shot_id": "SC02_SH02",
+        "scene_context": {
+          "location": "LOC_SUBLEVEL_RELAY_VAULT",
+          "time_of_day": "NIGHT",
+          "environment_state": "Subterranean basalt corridor lined with frost-covered waveguide conduits, heavy interlocking pressure doors, amber emergency beacons"
+        },
+        "subject": {
+          "character_ref": "CHAR_MARCUS_KOREN",
+          "action_core": "Sparks arc across the conduit manifold, leaving a scorch mark along Elena's right forearm sleeve as Koren braces the terminal.",
+          "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+          "wardrobe_id": "WARD_KOREN_LAB_PARKA",
+          "prop_interactions": [
+            "ART_CHRONO_COMPASS:engaged_in_core"
+          ]
+        },
+        "cinematography": {
+          "framing": "medium",
+          "camera_angle": "high_angle",
+          "camera_movement": "tracking",
+          "lens": "50mm_standard",
+          "composition": "180-axis locked (right_to_left), rule-of-thirds framing"
+        },
+        "lighting_and_atmosphere": {
+          "setup": "Volumetric Split",
+          "color_palette": "Steel blue and sodium vapor orange",
+          "color_grade": "Bleach Bypass",
+          "volumetrics": "Cryogenic mist and instrument beam shafts"
+        },
+        "temporal_dynamics": {
+          "duration_seconds": 4.0,
+          "frame_rate": 24,
+          "motion_intensity": 0.65
+        },
+        "consistency_anchors": {
+          "reference_image_uris": [
+            "canon/bible/characters/CHAR_MARCUS_KOREN/turnaround_front.png",
+            "canon/bible/locations/LOC_SUBLEVEL_RELAY_VAULT/base_render.png"
+          ],
+          "preserve_elements": [
+            "facial_geometry:CHAR_MARCUS_KOREN",
+            "ART_CHRONO_COMPASS",
+            "wardrobe:WARD_KOREN_LAB_PARKA"
+          ]
+        },
+        "prompt_uuid": "11f0d1d1-82c6-4cd0-b7fe-b57ab9ad889b",
+        "beat_name": "Midpoint",
+        "dialogue_line": "It isn't an echo. Beacon Nine is broadcasting live from inside the Jovian shadow.",
+        "dialogue_language": "en-US",
+        "negative_constraints": []
+      },
+      {
+        "shot_id": "SC03_SH01",
+        "scene_context": {
+          "location": "LOC_SUBLEVEL_RELAY_VAULT",
+          "time_of_day": "NIGHT",
+          "environment_state": "Subterranean basalt corridor lined with frost-covered waveguide conduits, heavy interlocking pressure doors, amber emergency beacons"
+        },
+        "subject": {
+          "character_ref": "CHAR_ELENA_VANCE",
+          "action_core": "Amber containment beacons spin along the vault ceiling. Elena pulls the scorched Chrono-Compass free and engages the uplink lever as the blast doors begin to close.",
+          "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+          "wardrobe_id": "WARD_ELENA_EVA_TRENCH",
+          "prop_interactions": [
+            "ART_CHRONO_COMPASS:recovered_scorched"
+          ]
+        },
+        "cinematography": {
+          "framing": "wide",
+          "camera_angle": "eye_level",
+          "camera_movement": "dolly_in",
+          "lens": "24mm_wide",
+          "composition": "180-axis locked (left_to_right), rule-of-thirds framing"
+        },
+        "lighting_and_atmosphere": {
+          "setup": "Volumetric Split",
+          "color_palette": "Steel blue and sodium vapor orange",
+          "color_grade": "Bleach Bypass",
+          "volumetrics": "Cryogenic mist and instrument beam shafts"
+        },
+        "temporal_dynamics": {
+          "duration_seconds": 3.5,
+          "frame_rate": 24,
+          "motion_intensity": 0.65
+        },
+        "consistency_anchors": {
+          "reference_image_uris": [
+            "canon/bible/characters/CHAR_ELENA_VANCE/turnaround_front.png",
+            "canon/bible/locations/LOC_SUBLEVEL_RELAY_VAULT/base_render.png"
+          ],
+          "preserve_elements": [
+            "facial_geometry:CHAR_ELENA_VANCE",
+            "ART_CHRONO_COMPASS",
+            "wardrobe:WARD_ELENA_EVA_TRENCH"
+          ]
+        },
+        "prompt_uuid": "4aab4043-47cd-4de7-89e9-7944210dace4",
+        "beat_name": "Finale",
+        "dialogue_line": "Telemetry packet transmitted. Move\u2014through the upper hatch now!",
+        "dialogue_language": "en-US",
+        "negative_constraints": []
+      },
+      {
+        "shot_id": "SC03_SH02",
+        "scene_context": {
+          "location": "LOC_SUBLEVEL_RELAY_VAULT",
+          "time_of_day": "NIGHT",
+          "environment_state": "Subterranean basalt corridor lined with frost-covered waveguide conduits, heavy interlocking pressure doors, amber emergency beacons"
+        },
+        "subject": {
+          "character_ref": "CHAR_MARCUS_KOREN",
+          "action_core": "Amber containment beacons spin along the vault ceiling. Elena pulls the scorched Chrono-Compass free and engages the uplink lever as the blast doors begin to close.",
+          "subtext_expression": "Focused intensity under chiaroscuro instrument light",
+          "wardrobe_id": "WARD_KOREN_LAB_PARKA",
+          "prop_interactions": [
+            "ART_CHRONO_COMPASS:recovered_scorched"
+          ]
+        },
+        "cinematography": {
+          "framing": "medium_close_up",
+          "camera_angle": "low_angle",
+          "camera_movement": "static",
+          "lens": "35mm_cinematic",
+          "composition": "180-axis locked (right_to_left), rule-of-thirds framing"
+        },
+        "lighting_and_atmosphere": {
+          "setup": "Volumetric Split",
+          "color_palette": "Steel blue and sodium vapor orange",
+          "color_grade": "Bleach Bypass",
+          "volumetrics": "Cryogenic mist and instrument beam shafts"
+        },
+        "temporal_dynamics": {
+          "duration_seconds": 4.0,
+          "frame_rate": 24,
+          "motion_intensity": 0.45
+        },
+        "consistency_anchors": {
+          "reference_image_uris": [
+            "canon/bible/characters/CHAR_MARCUS_KOREN/turnaround_front.png",
+            "canon/bible/locations/LOC_SUBLEVEL_RELAY_VAULT/base_render.png"
+          ],
+          "preserve_elements": [
+            "facial_geometry:CHAR_MARCUS_KOREN",
+            "ART_CHRONO_COMPASS",
+            "wardrobe:WARD_KOREN_LAB_PARKA"
+          ]
+        },
+        "prompt_uuid": "3b8230a0-e382-495b-a20c-d18124a1d587",
+        "beat_name": "Finale",
+        "dialogue_line": null,
+        "dialogue_language": "en-US",
+        "negative_constraints": []
+      }
+    ],
+    "ledger_parquet_path": "season_01/episode_01/continuity/continuity_ledger.parquet",
+    "keyframes": [
+      {
+        "shot_id": "SC01_SH01",
+        "scene_id": "SC01",
+        "image_path": "season_01/episode_01/storyboards/SC01_SH01_keyframe.png",
+        "grid_contact_sheet_path": "season_01/episode_01/storyboards/SC01_shared_attention_grid.png",
+        "dual_bridge_prompt": "[IDENTITY_ANCHOR:CHAR_ELENA_VANCE | Commander Elena Vance | BoneStructure: High zygomatic arches, defined mandibular angle; FacialGeometry: Oval-rectangular face, faint 12mm scar over left brow; Eyes: Almond-shaped slate-grey eyes with amber limbal ring; Phenotype: Northern Mediterranean / Nordic mix, olive-fair complexion; Hair: Coarse dark auburn hair braided tightly at nape; Height: 176cm] [DYNAMIC_SCENE_STATE:SC01_SH01 | Wardrobe(WARD_ELENA_EVA_TRENCH): Weathered navy pressure-trench with brass collar seals | PhysicalCondition: rain_dampened_collar, breath_misting | Props: ART_CHRONO_COMPASS:opened_calibrated | ScreenDirection: left_to_right (north_of_axis, eyeline east_15deg) | LightingLock: time_of_day=NIGHT, solar_angle=lunar_storm_zenith, weather=subpolar_sleet, lighting_setup=Chiaroscuro, color_grade=Teal & Orange | Action: Sleet lashes the curved glass of the observatory dome. Commander Elena Vance rotates the brass azimuth vernier until the green CRT waveform stabilizes. | MicroExpression: Focused intensity under chiaroscuro instrument light]",
+        "seed": 560104,
+        "model_version": "imagen-shared-attention-grid-v3",
+        "simulated_drift": false,
+        "verified": true,
+        "identity_score": 0.95,
+        "revision_count": 1
+      },
+      {
+        "shot_id": "SC01_SH02",
+        "scene_id": "SC01",
+        "image_path": "season_01/episode_01/storyboards/SC01_SH02_keyframe.png",
+        "grid_contact_sheet_path": "season_01/episode_01/storyboards/SC01_shared_attention_grid.png",
+        "dual_bridge_prompt": "[IDENTITY_ANCHOR:CHAR_MARCUS_KOREN | Dr. Marcus Koren | BoneStructure: Angular temporal bone, narrow nasal bridge, prominent chin; FacialGeometry: Long diamond face, deep nasolabial folds; Eyes: Deep-set hazel-green eyes behind rimless titanium spectacles; Phenotype: Central European complexion with silver-streaked beard; Hair: Fine iron-grey hair swept back from temples; Height: 183cm] [DYNAMIC_SCENE_STATE:SC01_SH02 | Wardrobe(WARD_KOREN_LAB_PARKA): Thermal graphite lab coat with copper dosimeter badge | PhysicalCondition: rain_dampened_collar, breath_misting | Props: ART_CHRONO_COMPASS:opened_calibrated | ScreenDirection: right_to_left (north_of_axis, eyeline west_15deg) | LightingLock: time_of_day=NIGHT, solar_angle=lunar_storm_zenith, weather=subpolar_sleet, lighting_setup=Chiaroscuro, color_grade=Teal & Orange | Action: Dr. Marcus Koren steps into the amber console light, adjusting his titanium spectacles as he unlatches the brass compass casing. | MicroExpression: Focused intensity under chiaroscuro instrument light]",
+        "seed": 25168,
+        "model_version": "imagen-shared-attention-grid-v3",
+        "simulated_drift": false,
+        "verified": true,
+        "identity_score": 0.91,
+        "revision_count": 1
+      },
+      {
+        "shot_id": "SC02_SH01",
+        "scene_id": "SC02",
+        "image_path": "season_01/episode_01/storyboards/SC02_SH01_keyframe.png",
+        "grid_contact_sheet_path": "season_01/episode_01/storyboards/SC02_shared_attention_grid.png",
+        "dual_bridge_prompt": "[IDENTITY_ANCHOR:CHAR_ELENA_VANCE | Commander Elena Vance | BoneStructure: High zygomatic arches, defined mandibular angle; FacialGeometry: Oval-rectangular face, faint 12mm scar over left brow; Eyes: Almond-shaped slate-grey eyes with amber limbal ring; Phenotype: Northern Mediterranean / Nordic mix, olive-fair complexion; Hair: Coarse dark auburn hair braided tightly at nape; Height: 176cm] [DYNAMIC_SCENE_STATE:SC02_SH01 | Wardrobe(WARD_ELENA_EVA_TRENCH): Weathered navy pressure-trench with brass collar seals | PhysicalCondition: rain_dampened_collar, breath_misting, cryo_frost_on_shoulders, scorch_mark_right_sleeve | Props: ART_CHRONO_COMPASS:engaged_in_core | ScreenDirection: left_to_right (north_of_axis, eyeline east_15deg) | LightingLock: time_of_day=NIGHT, solar_angle=lunar_storm_zenith, weather=cryogenic_mist, lighting_setup=Volumetric Split, color_grade=Bleach Bypass | Action: Cryogenic vapor pours across the grated basalt floor of the vault. Elena presses the opened Chrono-Compass into the recessed waveguide socket. | MicroExpression: Focused intensity under chiaroscuro instrument light]",
+        "seed": 236572,
+        "model_version": "imagen-shared-attention-grid-v3",
+        "simulated_drift": false,
+        "verified": true,
+        "identity_score": 0.91,
+        "revision_count": 1
+      },
+      {
+        "shot_id": "SC02_SH02",
+        "scene_id": "SC02",
+        "image_path": "season_01/episode_01/storyboards/SC02_SH02_keyframe.png",
+        "grid_contact_sheet_path": "season_01/episode_01/storyboards/SC02_shared_attention_grid.png",
+        "dual_bridge_prompt": "[IDENTITY_ANCHOR:CHAR_MARCUS_KOREN | Dr. Marcus Koren | BoneStructure: Angular temporal bone, narrow nasal bridge, prominent chin; FacialGeometry: Long diamond face, deep nasolabial folds; Eyes: Deep-set hazel-green eyes behind rimless titanium spectacles; Phenotype: Central European complexion with silver-streaked beard; Hair: Fine iron-grey hair swept back from temples; Height: 183cm] [DYNAMIC_SCENE_STATE:SC02_SH02 | Wardrobe(WARD_KOREN_LAB_PARKA): Thermal graphite lab coat with copper dosimeter badge | PhysicalCondition: rain_dampened_collar, breath_misting, cryo_frost_on_shoulders, scorch_mark_right_sleeve | Props: ART_CHRONO_COMPASS:engaged_in_core | ScreenDirection: right_to_left (north_of_axis, eyeline west_15deg) | LightingLock: time_of_day=NIGHT, solar_angle=lunar_storm_zenith, weather=cryogenic_mist, lighting_setup=Volumetric Split, color_grade=Bleach Bypass | Action: Sparks arc across the conduit manifold, leaving a scorch mark along Elena's right forearm sleeve as Koren braces the terminal. | MicroExpression: Focused intensity under chiaroscuro instrument light]",
+        "seed": 460107,
+        "model_version": "imagen-shared-attention-grid-v3",
+        "simulated_drift": false,
+        "verified": true,
+        "identity_score": 0.91,
+        "revision_count": 1
+      },
+      {
+        "shot_id": "SC03_SH01",
+        "scene_id": "SC03",
+        "image_path": "season_01/episode_01/storyboards/SC03_SH01_keyframe.png",
+        "grid_contact_sheet_path": "season_01/episode_01/storyboards/SC03_shared_attention_grid.png",
+        "dual_bridge_prompt": "[IDENTITY_ANCHOR:CHAR_ELENA_VANCE | Commander Elena Vance | BoneStructure: High zygomatic arches, defined mandibular angle; FacialGeometry: Oval-rectangular face, faint 12mm scar over left brow; Eyes: Almond-shaped slate-grey eyes with amber limbal ring; Phenotype: Northern Mediterranean / Nordic mix, olive-fair complexion; Hair: Coarse dark auburn hair braided tightly at nape; Height: 176cm] [DYNAMIC_SCENE_STATE:SC03_SH01 | Wardrobe(WARD_ELENA_EVA_TRENCH): Weathered navy pressure-trench with brass collar seals | PhysicalCondition: rain_dampened_collar, breath_misting, cryo_frost_on_shoulders, scorch_mark_right_sleeve, soot_streaked_forearm, elevated_respiration | Props: ART_CHRONO_COMPASS:recovered_scorched | ScreenDirection: left_to_right (north_of_axis, eyeline east_15deg) | LightingLock: time_of_day=NIGHT, solar_angle=lunar_storm_zenith, weather=cryogenic_mist, lighting_setup=Volumetric Split, color_grade=Bleach Bypass | Action: Amber containment beacons spin along the vault ceiling. Elena pulls the scorched Chrono-Compass free and engages the uplink lever as the blast doors begin to close. | MicroExpression: Focused intensity under chiaroscuro instrument light]",
+        "seed": 320684,
+        "model_version": "imagen-shared-attention-grid-v3",
+        "simulated_drift": false,
+        "verified": true,
+        "identity_score": 0.91,
+        "revision_count": 1
+      },
+      {
+        "shot_id": "SC03_SH02",
+        "scene_id": "SC03",
+        "image_path": "season_01/episode_01/storyboards/SC03_SH02_keyframe.png",
+        "grid_contact_sheet_path": "season_01/episode_01/storyboards/SC03_shared_attention_grid.png",
+        "dual_bridge_prompt": "[IDENTITY_ANCHOR:CHAR_MARCUS_KOREN | Dr. Marcus Koren | BoneStructure: Angular temporal bone, narrow nasal bridge, prominent chin; FacialGeometry: Long diamond face, deep nasolabial folds; Eyes: Deep-set hazel-green eyes behind rimless titanium spectacles; Phenotype: Central European complexion with silver-streaked beard; Hair: Fine iron-grey hair swept back from temples; Height: 183cm] [DYNAMIC_SCENE_STATE:SC03_SH02 | Wardrobe(WARD_KOREN_LAB_PARKA): Thermal graphite lab coat with copper dosimeter badge | PhysicalCondition: rain_dampened_collar, breath_misting, cryo_frost_on_shoulders, scorch_mark_right_sleeve, soot_streaked_forearm, elevated_respiration | Props: ART_CHRONO_COMPASS:recovered_scorched | ScreenDirection: right_to_left (north_of_axis, eyeline west_15deg) | LightingLock: time_of_day=NIGHT, solar_angle=lunar_storm_zenith, weather=cryogenic_mist, lighting_setup=Volumetric Split, color_grade=Bleach Bypass | Action: Amber containment beacons spin along the vault ceiling. Elena pulls the scorched Chrono-Compass free and engages the uplink lever as the blast doors begin to close. | MicroExpression: Focused intensity under chiaroscuro instrument light]",
+        "seed": 343752,
+        "model_version": "imagen-shared-attention-grid-v3",
+        "simulated_drift": false,
+        "verified": true,
+        "identity_score": 0.91,
+        "revision_count": 1
+      }
+    ],
+    "verdicts": [
+      {
+        "shot_id": "SC01_SH01",
+        "accepted": true,
+        "identity_score": 0.95,
+        "prop_consistency_ok": true,
+        "wardrobe_consistency_ok": true,
+        "screen_direction_ok": true,
+        "revision_delta": null
+      },
+      {
+        "shot_id": "SC01_SH02",
+        "accepted": true,
+        "identity_score": 0.91,
+        "prop_consistency_ok": true,
+        "wardrobe_consistency_ok": true,
+        "screen_direction_ok": true,
+        "revision_delta": null
+      },
+      {
+        "shot_id": "SC02_SH01",
+        "accepted": true,
+        "identity_score": 0.91,
+        "prop_consistency_ok": true,
+        "wardrobe_consistency_ok": true,
+        "screen_direction_ok": true,
+        "revision_delta": null
+      },
+      {
+        "shot_id": "SC02_SH02",
+        "accepted": true,
+        "identity_score": 0.91,
+        "prop_consistency_ok": true,
+        "wardrobe_consistency_ok": true,
+        "screen_direction_ok": true,
+        "revision_delta": null
+      },
+      {
+        "shot_id": "SC03_SH01",
+        "accepted": true,
+        "identity_score": 0.91,
+        "prop_consistency_ok": true,
+        "wardrobe_consistency_ok": true,
+        "screen_direction_ok": true,
+        "revision_delta": null
+      },
+      {
+        "shot_id": "SC03_SH02",
+        "accepted": true,
+        "identity_score": 0.91,
+        "prop_consistency_ok": true,
+        "wardrobe_consistency_ok": true,
+        "screen_direction_ok": true,
+        "revision_delta": null
+      }
+    ],
+    "rejected_shot_ids": [],
+    "motion_clips": [
+      {
+        "shot_id": "SC01_SH01",
+        "video_path": "season_01/episode_01/media/SC01_SH01_master.mp4",
+        "takes_generated": 2,
+        "selected_take": 1,
+        "seed": 560104,
+        "model_version": "veo-3-i2v-1.2",
+        "frame_stepping_passed": true,
+        "motion_smoothness_score": 0.95
+      },
+      {
+        "shot_id": "SC01_SH02",
+        "video_path": "season_01/episode_01/media/SC01_SH02_master.mp4",
+        "takes_generated": 2,
+        "selected_take": 1,
+        "seed": 25168,
+        "model_version": "veo-3-i2v-1.2",
+        "frame_stepping_passed": true,
+        "motion_smoothness_score": 0.95
+      },
+      {
+        "shot_id": "SC02_SH01",
+        "video_path": "season_01/episode_01/media/SC02_SH01_master.mp4",
+        "takes_generated": 2,
+        "selected_take": 1,
+        "seed": 236572,
+        "model_version": "veo-3-i2v-1.2",
+        "frame_stepping_passed": true,
+        "motion_smoothness_score": 0.95
+      },
+      {
+        "shot_id": "SC02_SH02",
+        "video_path": "season_01/episode_01/media/SC02_SH02_master.mp4",
+        "takes_generated": 2,
+        "selected_take": 1,
+        "seed": 460107,
+        "model_version": "veo-3-i2v-1.2",
+        "frame_stepping_passed": true,
+        "motion_smoothness_score": 0.95
+      },
+      {
+        "shot_id": "SC03_SH01",
+        "video_path": "season_01/episode_01/media/SC03_SH01_master.mp4",
+        "takes_generated": 2,
+        "selected_take": 1,
+        "seed": 320684,
+        "model_version": "veo-3-i2v-1.2",
+        "frame_stepping_passed": true,
+        "motion_smoothness_score": 0.95
+      },
+      {
+        "shot_id": "SC03_SH02",
+        "video_path": "season_01/episode_01/media/SC03_SH02_master.mp4",
+        "takes_generated": 2,
+        "selected_take": 1,
+        "seed": 343752,
+        "model_version": "veo-3-i2v-1.2",
+        "frame_stepping_passed": true,
+        "motion_smoothness_score": 0.95
+      }
+    ],
+    "dialogue_wavs": {
+      "SC01_SH01": "season_01/episode_01/media/SC01_SH01_dialogue.wav",
+      "SC01_SH02": "season_01/episode_01/media/SC01_SH02_dialogue.wav",
+      "SC02_SH01": "season_01/episode_01/media/SC02_SH01_dialogue.wav",
+      "SC02_SH02": "season_01/episode_01/media/SC02_SH02_dialogue.wav",
+      "SC03_SH01": "season_01/episode_01/media/SC03_SH01_dialogue.wav",
+      "SC03_SH02": "season_01/episode_01/media/SC03_SH02_dialogue.wav"
+    },
+    "otio_path": "C:\\Users\\Benjamin Hinnum\\VideoStudio\\season_01\\episode_01\\editorial\\Episode_S01E01_Assembly.otio",
+    "timeline_summary": {
+      "name": "Episode_S01E01_Assembly",
+      "total_clips": 6,
+      "total_frames": 540,
+      "total_duration_seconds": 22.5,
+      "tracks": [
+        {
+          "name": "V1_Master_Video",
+          "kind": "Video",
+          "items": [
+            {
+              "type": "Clip",
+              "name": "SC01_SH01",
+              "duration_seconds": 3.5,
+              "duration_frames": 84,
+              "target_url": "season_01/episode_01/media/SC01_SH01_master.mp4",
+              "generative_lineage": {
+                "continuity_ledger_index": 0,
+                "model_version": "veo-3-i2v-1.2",
+                "prompt_uuid": "36d984ab-ffc0-43bf-bdbb-7187e052625c",
+                "seed": 560104
+              },
+              "markers": [
+                {
+                  "name": "Beat: Catalyst",
+                  "color": "CYAN"
+                }
+              ]
+            },
+            {
+              "type": "Clip",
+              "name": "SC01_SH02",
+              "duration_seconds": 4.0,
+              "duration_frames": 96,
+              "target_url": "season_01/episode_01/media/SC01_SH02_master.mp4",
+              "generative_lineage": {
+                "continuity_ledger_index": 1,
+                "model_version": "veo-3-i2v-1.2",
+                "prompt_uuid": "240e8aee-5049-40ce-9dc9-225103b4633e",
+                "seed": 25168
+              },
+              "markers": [
+                {
+                  "name": "Beat: Catalyst",
+                  "color": "CYAN"
+                }
+              ]
+            },
+            {
+              "type": "Clip",
+              "name": "SC02_SH01",
+              "duration_seconds": 3.5,
+              "duration_frames": 84,
+              "target_url": "season_01/episode_01/media/SC02_SH01_master.mp4",
+              "generative_lineage": {
+                "continuity_ledger_index": 2,
+                "model_version": "veo-3-i2v-1.2",
+                "prompt_uuid": "f4c76459-1dcb-43df-b73b-bcbe48f59333",
+                "seed": 236572
+              },
+              "markers": [
+                {
+                  "name": "Beat: Midpoint",
+                  "color": "CYAN"
+                }
+              ]
+            },
+            {
+              "type": "Clip",
+              "name": "SC02_SH02",
+              "duration_seconds": 4.0,
+              "duration_frames": 96,
+              "target_url": "season_01/episode_01/media/SC02_SH02_master.mp4",
+              "generative_lineage": {
+                "continuity_ledger_index": 3,
+                "model_version": "veo-3-i2v-1.2",
+                "prompt_uuid": "11f0d1d1-82c6-4cd0-b7fe-b57ab9ad889b",
+                "seed": 460107
+              },
+              "markers": [
+                {
+                  "name": "Beat: Midpoint",
+                  "color": "CYAN"
+                }
+              ]
+            },
+            {
+              "type": "Clip",
+              "name": "SC03_SH01",
+              "duration_seconds": 3.5,
+              "duration_frames": 84,
+              "target_url": "season_01/episode_01/media/SC03_SH01_master.mp4",
+              "generative_lineage": {
+                "continuity_ledger_index": 4,
+                "model_version": "veo-3-i2v-1.2",
+                "prompt_uuid": "4aab4043-47cd-4de7-89e9-7944210dace4",
+                "seed": 320684
+              },
+              "markers": [
+                {
+                  "name": "Beat: Finale",
+                  "color": "CYAN"
+                }
+              ]
+            },
+            {
+              "type": "Clip",
+              "name": "SC03_SH02",
+              "duration_seconds": 4.0,
+              "duration_frames": 96,
+              "target_url": "season_01/episode_01/media/SC03_SH02_master.mp4",
+              "generative_lineage": {
+                "continuity_ledger_index": 5,
+                "model_version": "veo-3-i2v-1.2",
+                "prompt_uuid": "3b8230a0-e382-495b-a20c-d18124a1d587",
+                "seed": 343752
+              },
+              "markers": [
+                {
+                  "name": "Beat: Finale",
+                  "color": "CYAN"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "A1_Dialogue",
+          "kind": "Audio",
+          "items": [
+            {
+              "type": "Clip",
+              "name": "SC01_SH01_DLG",
+              "duration_seconds": 3.5,
+              "duration_frames": 84,
+              "target_url": "season_01/episode_01/media/SC01_SH01_dialogue.wav",
+              "generative_lineage": {
+                "continuity_ledger_index": 0,
+                "prompt_uuid": "36d984ab-ffc0-43bf-bdbb-7187e052625c"
+              },
+              "markers": []
+            },
+            {
+              "type": "Clip",
+              "name": "SC01_SH02_DLG",
+              "duration_seconds": 4.0,
+              "duration_frames": 96,
+              "target_url": "season_01/episode_01/media/SC01_SH02_dialogue.wav",
+              "generative_lineage": {
+                "continuity_ledger_index": 1,
+                "prompt_uuid": "240e8aee-5049-40ce-9dc9-225103b4633e"
+              },
+              "markers": []
+            },
+            {
+              "type": "Clip",
+              "name": "SC02_SH01_DLG",
+              "duration_seconds": 3.5,
+              "duration_frames": 84,
+              "target_url": "season_01/episode_01/media/SC02_SH01_dialogue.wav",
+              "generative_lineage": {
+                "continuity_ledger_index": 2,
+                "prompt_uuid": "f4c76459-1dcb-43df-b73b-bcbe48f59333"
+              },
+              "markers": []
+            },
+            {
+              "type": "Clip",
+              "name": "SC02_SH02_DLG",
+              "duration_seconds": 4.0,
+              "duration_frames": 96,
+              "target_url": "season_01/episode_01/media/SC02_SH02_dialogue.wav",
+              "generative_lineage": {
+                "continuity_ledger_index": 3,
+                "prompt_uuid": "11f0d1d1-82c6-4cd0-b7fe-b57ab9ad889b"
+              },
+              "markers": []
+            },
+            {
+              "type": "Clip",
+              "name": "SC03_SH01_DLG",
+              "duration_seconds": 3.5,
+              "duration_frames": 84,
+              "target_url": "season_01/episode_01/media/SC03_SH01_dialogue.wav",
+              "generative_lineage": {
+                "continuity_ledger_index": 4,
+                "prompt_uuid": "4aab4043-47cd-4de7-89e9-7944210dace4"
+              },
+              "markers": []
+            },
+            {
+              "type": "Clip",
+              "name": "SC03_SH02_DLG",
+              "duration_seconds": 4.0,
+              "duration_frames": 96,
+              "target_url": "season_01/episode_01/media/SC03_SH02_dialogue.wav",
+              "generative_lineage": {
+                "continuity_ledger_index": 5,
+                "prompt_uuid": "3b8230a0-e382-495b-a20c-d18124a1d587"
+              },
+              "markers": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "otio_timeline_path": "season_01/episode_01/editorial/Episode_S01E01_Assembly.otio"
+}

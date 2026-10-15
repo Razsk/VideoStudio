@@ -1,0 +1,127 @@
+{
+  "nodes": [
+    {
+      "node_id": "CHAR_ELENA_VANCE",
+      "entity_type": "character",
+      "name": "Commander Elena Vance",
+      "biological_markers": {
+        "scar": "left_brow_12mm",
+        "eyes": "slate_grey"
+      },
+      "allegiances": [
+        "FACTION_HELIOS_WATCH"
+      ],
+      "current_physical_condition": "nominal",
+      "description": "Commander of the Helios Observatory guarding the deep-space telemetry array."
+    },
+    {
+      "node_id": "CHAR_MARCUS_KOREN",
+      "entity_type": "character",
+      "name": "Dr. Marcus Koren",
+      "biological_markers": {
+        "glasses": "rimless_titanium",
+        "beard": "silver_streaked"
+      },
+      "allegiances": [
+        "FACTION_HELIOS_WATCH",
+        "FACTION_AETHER_DIRECTORATE"
+      ],
+      "current_physical_condition": "nominal",
+      "description": "Chief astrophysicist secretly archiving unauthorized orbital transmissions."
+    },
+    {
+      "node_id": "LOC_OBSERVATORY_DOME",
+      "entity_type": "location",
+      "name": "Helios Deep-Space Observatory Dome",
+      "biological_markers": {},
+      "allegiances": [],
+      "current_physical_condition": "nominal",
+      "description": "Primary astrometric tracking dome battered by sub-polar storms."
+    },
+    {
+      "node_id": "LOC_SUBLEVEL_RELAY_VAULT",
+      "entity_type": "location",
+      "name": "Sub-Level 4 Cryogenic Relay Vault",
+      "biological_markers": {},
+      "allegiances": [],
+      "current_physical_condition": "nominal",
+      "description": "Deep subterranean vault housing the quantum phase-lock cores."
+    },
+    {
+      "node_id": "ART_CHRONO_COMPASS",
+      "entity_type": "artifact",
+      "name": "Brass Chrono-Compass",
+      "biological_markers": {},
+      "allegiances": [],
+      "current_physical_condition": "nominal",
+      "description": "Mechanical decryption key required to unseal the Sub-Level 4 vault."
+    },
+    {
+      "node_id": "SECRET_GHOST_TELEMETRY",
+      "entity_type": "lore_fact",
+      "name": "The Ghost Telemetry Carrier Wave",
+      "biological_markers": {},
+      "allegiances": [],
+      "current_physical_condition": "nominal",
+      "description": "Decommissioned Beacon 9 is still broadcasting coordinates from beyond the Jovian shadow."
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "CHAR_ELENA_VANCE",
+      "target_id": "ART_CHRONO_COMPASS",
+      "relation": "POSSESSES",
+      "valid_from_step": 0,
+      "valid_to_step": null,
+      "metadata": {
+        "affordance": "clipped_to_belt"
+      }
+    },
+    {
+      "source_id": "CHAR_ELENA_VANCE",
+      "target_id": "LOC_OBSERVATORY_DOME",
+      "relation": "LOCATED_AT",
+      "valid_from_step": 0,
+      "valid_to_step": 2,
+      "metadata": {}
+    },
+    {
+      "source_id": "CHAR_MARCUS_KOREN",
+      "target_id": "SECRET_GHOST_TELEMETRY",
+      "relation": "KNOWS_SECRET",
+      "valid_from_step": 0,
+      "valid_to_step": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "CHAR_ELENA_VANCE",
+      "target_id": "SECRET_GHOST_TELEMETRY",
+      "relation": "KNOWS_SECRET",
+      "valid_from_step": 2,
+      "valid_to_step": null,
+      "metadata": {}
+    }
+  ],
+  "tonal_precedents": [
+    {
+      "doc_id": "PRECEDENT_CHIAROSCURO_SCI_FI",
+      "text": "Tactile analog-futurist sci-fi tension: brass dials, rain-streaked glass, chiaroscuro instrument lighting, clipped dialogue heavy with subtext.",
+      "tags": [
+        "analog-futurism",
+        "chiaroscuro",
+        "tension",
+        "observatory"
+      ]
+    },
+    {
+      "doc_id": "PRECEDENT_SUBLEVEL_DESCENT",
+      "text": "Claustrophobic subterranean industrial descent: venting cryo-steam, bleach-bypass sodium lighting, footsteps echoing on grated catwalks.",
+      "tags": [
+        "vault",
+        "bleach-bypass",
+        "industrial",
+        "suspense"
+      ]
+    }
+  ]
+}

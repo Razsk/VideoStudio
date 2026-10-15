@@ -1,0 +1,227 @@
+{
+  "episode_id": "S01E01",
+  "title": "Episode S01E01: The Azimuth Signal",
+  "author": "VideoStudio Multi-Agent Pipeline",
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "uuid": "38fae0f5-296e-4e65-ae63-4782dc76c578",
+      "beat_name": "Catalyst",
+      "heading": {
+        "element_type": "scene_heading",
+        "uuid": "de563ef3-a36c-4aaa-81b7-264cd4d141bb",
+        "context": "INT",
+        "setting": "Helios Deep-Space Observatory Dome",
+        "time_of_day": "NIGHT",
+        "lighting_lock": "Chiaroscuro",
+        "color_palette_lock": "Teal & Orange"
+      },
+      "elements": [
+        {
+          "element_type": "action",
+          "uuid": "66efbec6-d7c0-41d7-8aae-25b39c390c60",
+          "description": "Sleet lashes the curved glass of the observatory dome. Commander Elena Vance rotates the brass azimuth vernier until the green CRT waveform stabilizes."
+        },
+        {
+          "element_type": "character",
+          "uuid": "7e24541e-0dd8-47c6-90a1-58efb37d5a66",
+          "character_id": "CHAR_ELENA_VANCE",
+          "name": "ELENA VANCE",
+          "base_bible_anchor_key": "canon/bible/characters/CHAR_ELENA_VANCE"
+        },
+        {
+          "element_type": "parenthetical",
+          "uuid": "91541236-a58d-4bc8-8e93-158022ea3e3d",
+          "micro_expression": "eyes fixed on the oscilloscope, jaw set",
+          "emotional_cadence": "low, measured urgency"
+        },
+        {
+          "element_type": "dialogue",
+          "uuid": "f9398417-4b69-4e0f-a758-17ace469ee56",
+          "character_id": "CHAR_ELENA_VANCE",
+          "spoken_string": "That carrier wave is repeating on a seven-second harmonic. Unseal the Chrono-Compass.",
+          "language_identifier": "en-US"
+        },
+        {
+          "element_type": "action",
+          "uuid": "dedd4d06-495a-4aed-ba9a-888aaa9f07bd",
+          "description": "Dr. Marcus Koren steps into the amber console light, adjusting his titanium spectacles as he unlatches the brass compass casing."
+        },
+        {
+          "element_type": "character",
+          "uuid": "e46ff665-f9ac-4a4a-b245-e694a5cbe99f",
+          "character_id": "CHAR_MARCUS_KOREN",
+          "name": "DR. MARCUS KOREN",
+          "base_bible_anchor_key": "canon/bible/characters/CHAR_MARCUS_KOREN"
+        },
+        {
+          "element_type": "parenthetical",
+          "uuid": "4d521ddd-e8d8-4e25-ba6a-a47ef1c48d5c",
+          "micro_expression": "glancing toward the pressure bulkhead",
+          "emotional_cadence": "guarded, hesitant"
+        },
+        {
+          "element_type": "dialogue",
+          "uuid": "0489b5d4-850e-4c49-a8ec-102bb44f03cb",
+          "character_id": "CHAR_MARCUS_KOREN",
+          "spoken_string": "If we route that harmonic through Sub-Level Four, the Directorate sensors will register the spike.",
+          "language_identifier": "en-US"
+        },
+        {
+          "element_type": "transition",
+          "uuid": "95b3b445-bfa3-42ff-b816-8c9e3cb68a31",
+          "transition_type": "CUT TO:"
+        }
+      ],
+      "initial_state": {
+        "relay_lock": "unlocked",
+        "compass_state": "closed_on_belt",
+        "vault_access": "sealed"
+      },
+      "terminal_state": {
+        "relay_lock": "phase_locked",
+        "compass_state": "opened_calibrated",
+        "vault_access": "authorized"
+      }
+    },
+    {
+      "scene_id": "SC02",
+      "uuid": "f50c0905-b0b0-4747-85b5-6ba1e4dc0dd5",
+      "beat_name": "Midpoint",
+      "heading": {
+        "element_type": "scene_heading",
+        "uuid": "3facffc0-ebb3-4224-85b8-295d29569bf1",
+        "context": "INT",
+        "setting": "Sub-Level 4 Cryogenic Relay Vault",
+        "time_of_day": "NIGHT",
+        "lighting_lock": "Volumetric Split",
+        "color_palette_lock": "Bleach Bypass"
+      },
+      "elements": [
+        {
+          "element_type": "action",
+          "uuid": "86e0d2bf-8573-473d-b5ac-446319339b57",
+          "description": "Cryogenic vapor pours across the grated basalt floor of the vault. Elena presses the opened Chrono-Compass into the recessed waveguide socket."
+        },
+        {
+          "element_type": "character",
+          "uuid": "0e84a1cc-e73c-48ca-bbcd-605bf416632f",
+          "character_id": "CHAR_ELENA_VANCE",
+          "name": "ELENA VANCE",
+          "base_bible_anchor_key": "canon/bible/characters/CHAR_ELENA_VANCE"
+        },
+        {
+          "element_type": "parenthetical",
+          "uuid": "39dcbeff-f89b-4b27-b3fb-6df0f0def7d4",
+          "micro_expression": "breath misting in the cold, brow furrowed",
+          "emotional_cadence": "resolute"
+        },
+        {
+          "element_type": "dialogue",
+          "uuid": "eb3619a4-cecc-4745-b6c8-0862a9f1c21f",
+          "character_id": "CHAR_ELENA_VANCE",
+          "spoken_string": "The phase lock holds. Read me the origin coordinates before the frost blinds the primary optics.",
+          "language_identifier": "en-US"
+        },
+        {
+          "element_type": "action",
+          "uuid": "b3b615ea-7b2f-433e-b958-60aff1c1716e",
+          "description": "Sparks arc across the conduit manifold, leaving a scorch mark along Elena's right forearm sleeve as Koren braces the terminal."
+        },
+        {
+          "element_type": "character",
+          "uuid": "36b0e5f7-e07b-4026-8596-21640c7a1889",
+          "character_id": "CHAR_MARCUS_KOREN",
+          "name": "DR. MARCUS KOREN",
+          "base_bible_anchor_key": "canon/bible/characters/CHAR_MARCUS_KOREN"
+        },
+        {
+          "element_type": "parenthetical",
+          "uuid": "371cb09f-2ccc-4c98-bdd1-f5b66a2ac84a",
+          "micro_expression": "eyes widening behind fogged lenses",
+          "emotional_cadence": "stunned realization"
+        },
+        {
+          "element_type": "dialogue",
+          "uuid": "b3bfc2ad-c5ad-430e-8a58-f9ea09dc59fc",
+          "character_id": "CHAR_MARCUS_KOREN",
+          "spoken_string": "It isn't an echo. Beacon Nine is broadcasting live from inside the Jovian shadow.",
+          "language_identifier": "en-US"
+        },
+        {
+          "element_type": "transition",
+          "uuid": "7b88c87b-9f3c-4135-a429-e472332f8eb9",
+          "transition_type": "DISSOLVE TO:"
+        }
+      ],
+      "initial_state": {
+        "relay_lock": "phase_locked",
+        "compass_state": "opened_calibrated",
+        "vault_access": "authorized"
+      },
+      "terminal_state": {
+        "relay_lock": "decrypted",
+        "compass_state": "engaged_in_core",
+        "vault_access": "lockdown_triggered"
+      }
+    },
+    {
+      "scene_id": "SC03",
+      "uuid": "04702f1d-4104-4938-8b92-ce3183c659d4",
+      "beat_name": "Finale",
+      "heading": {
+        "element_type": "scene_heading",
+        "uuid": "d29a0a21-df54-4c69-97f5-0e1ee8786d24",
+        "context": "INT",
+        "setting": "Sub-Level 4 Cryogenic Relay Vault",
+        "time_of_day": "NIGHT",
+        "lighting_lock": "Volumetric Split",
+        "color_palette_lock": "Bleach Bypass"
+      },
+      "elements": [
+        {
+          "element_type": "action",
+          "uuid": "2ac21f12-03ca-4ab1-977e-23e69324b0a4",
+          "description": "Amber containment beacons spin along the vault ceiling. Elena pulls the scorched Chrono-Compass free and engages the uplink lever as the blast doors begin to close."
+        },
+        {
+          "element_type": "character",
+          "uuid": "bd794c70-61d5-463c-90ed-269c5767da81",
+          "character_id": "CHAR_ELENA_VANCE",
+          "name": "ELENA VANCE",
+          "base_bible_anchor_key": "canon/bible/characters/CHAR_ELENA_VANCE"
+        },
+        {
+          "element_type": "parenthetical",
+          "uuid": "cbedea23-8e91-4726-9563-4206389d619b",
+          "micro_expression": "flinching against the sodium glare, resolute",
+          "emotional_cadence": "commanding"
+        },
+        {
+          "element_type": "dialogue",
+          "uuid": "cca46a0f-e8c7-4a61-9b07-1a06fff7b748",
+          "character_id": "CHAR_ELENA_VANCE",
+          "spoken_string": "Telemetry packet transmitted. Move\u2014through the upper hatch now!",
+          "language_identifier": "en-US"
+        },
+        {
+          "element_type": "transition",
+          "uuid": "b4051586-ed04-4837-b69b-3da8b638718b",
+          "transition_type": "FADE OUT:"
+        }
+      ],
+      "initial_state": {
+        "relay_lock": "decrypted",
+        "compass_state": "engaged_in_core",
+        "vault_access": "lockdown_triggered"
+      },
+      "terminal_state": {
+        "relay_lock": "broadcast_complete",
+        "compass_state": "recovered_scorched",
+        "vault_access": "escaped_upper_ring"
+      }
+    }
+  ],
+  "dialogue_naturalism_score": 0.95,
+  "subtext_faithfulness_score": 0.93
+}

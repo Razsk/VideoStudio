@@ -1,0 +1,23 @@
+{
+  "character_id": "CHAR_ELENA_VANCE",
+  "name": "Commander Elena Vance",
+  "bone_structure": "High zygomatic arches, defined mandibular angle",
+  "facial_geometry": "Oval-rectangular face, faint 12mm scar over left brow",
+  "facial_proportions": "Balanced facial thirds, intercanthal distance 32mm",
+  "eye_shape_and_color": "Almond-shaped slate-grey eyes with amber limbal ring",
+  "ethnic_phenotype": "Northern Mediterranean / Nordic mix, olive-fair complexion",
+  "baseline_hair_texture": "Coarse dark auburn hair braided tightly at nape",
+  "physical_height": "176cm",
+  "turnaround_plates": {
+    "front": "canon/bible/characters/CHAR_ELENA_VANCE/turnaround_front.png",
+    "angle_45": "canon/bible/characters/CHAR_ELENA_VANCE/turnaround_45.png",
+    "profile": "canon/bible/characters/CHAR_ELENA_VANCE/turnaround_profile.png"
+  },
+  "lora_weights_uri": "canon/bible/characters/CHAR_ELENA_VANCE/elena_vance_v1.safetensors",
+  "costume_variants": {
+    "WARD_ELENA_EVA_TRENCH": "Weathered navy pressure-trench with brass collar seals",
+    "WARD_ELENA_FLIGHT_DECK": "Charcoal utility jumpsuit with Helios Watch patch"
+  },
+  "voice_profile": "contralto_measured_urgent",
+  "invariant_sha256": "b7731e86ca39aa1c9b0474d450c8b90688071e6a3bcab5a428f959a1893a2d9e"
+}

@@ -1,0 +1,10 @@
+{
+  "location_id": "LOC_SUBLEVEL_RELAY_VAULT",
+  "name": "Sub-Level 4 Cryogenic Relay Vault",
+  "spatial_coordinates": "LAT +64.12 LON -21.89 DEPTH -180M",
+  "architectural_prompt_card": "Subterranean basalt corridor lined with frost-covered waveguide conduits, heavy interlocking pressure doors, amber emergency beacons",
+  "base_environment_render_uri": "canon/bible/locations/LOC_SUBLEVEL_RELAY_VAULT/base_render.png",
+  "default_lighting_setup": "Volumetric Split",
+  "default_color_palette": "Steel blue and sodium vapor orange",
+  "default_color_grade": "Bleach Bypass"
+}

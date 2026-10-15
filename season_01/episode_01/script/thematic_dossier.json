@@ -1,0 +1,30 @@
+{
+  "episode_id": "S01E01",
+  "story_seed": "An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and Dr. Marcus Koren into the Sub-Level 4 Cryogenic Relay Vault.",
+  "premise": "When An encrypted harmonic from decommissioned Beacon 9 forces Commander Elena Vance and Dr. Marcus Koren into the Sub-Level 4 Cryogenic Relay Vault, Commander Elena Vance and Dr. Marcus Koren must verify the anomalous carrier wave inside the Sub-Level 4 Cryogenic Relay Vault before orbital containment seals the dome.",
+  "tone": "Tactile analog-futurist sci-fi thriller with chiaroscuro tension",
+  "target_conflicts": [
+    "Institutional secrecy vs. empirical truth over Beacon 9 telemetry",
+    "Sub-polar environmental hazard threatening dome structural integrity",
+    "Asymmetric knowledge between Koren and Vance regarding the Ghost Telemetry"
+  ],
+  "immutable_facts": [
+    "Season Arc: The Jovian Shadow Conspiracy",
+    "Commander Elena Vance commands the Helios Deep-Space Observatory Dome.",
+    "Dr. Marcus Koren holds dual allegiance with the Aether Directorate.",
+    "Accessible artifacts at episode start: ART_CHRONO_COMPASS"
+  ],
+  "lore_entities_referenced": [
+    "CHAR_ELENA_VANCE",
+    "CHAR_MARCUS_KOREN",
+    "LOC_OBSERVATORY_DOME",
+    "LOC_SUBLEVEL_RELAY_VAULT",
+    "ART_CHRONO_COMPASS",
+    "SECRET_GHOST_TELEMETRY"
+  ],
+  "tonal_precedents": [
+    "Claustrophobic subterranean industrial descent: venting cryo-steam, bleach-bypass sodium lighting, footsteps echoing on grated catwalks.",
+    "Tactile analog-futurist sci-fi tension: brass dials, rain-streaked glass, chiaroscuro instrument lighting, clipped dialogue heavy with subtext."
+  ],
+  "setting_adherence_score": 0.96
+}
