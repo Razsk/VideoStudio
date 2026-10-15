@@ -101,6 +101,7 @@ python -m pytest -v
 
 ## Documentation & Domain Model
 
+- [`docs/USER_GUIDE.md`](./docs/USER_GUIDE.md) — Complete User Guide (CLI, Web Control Room, Human Gates, Canon authoring, Continuity Ledger & OpenTimelineIO)
 - [`GLOSSARY.md`](./GLOSSARY.md) — Ubiquitous domain language for the studio
 - [`AGENTS.md`](./AGENTS.md) — Module boundaries, seams, and Matt Pocock skills configuration
 - [`docs/SPECIFICATION.md`](./docs/SPECIFICATION.md) — Full architectural specification
