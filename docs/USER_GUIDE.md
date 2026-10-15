@@ -91,6 +91,34 @@ python -m videostudio.cli produce `
 - `--seed <text>`: The episode's narrative prompt or story seed.
 - `--season-arc <text>`: Overarching season conflict injected into the Research & Lore Agent.
 - `--simulate-drift <shot_ids>`: Comma-separated shot IDs (e.g., `SC01_SH01`) on which to simulate initial facial/identity drift so you can observe the **VLM Continuity Judge** reject the frame ($Score_{ID} < 0.85$) and trigger the **Semantic Loop** (`semantic_revision` $\rightarrow$ `keyframe_synthesis` $\rightarrow$ `vlm_judge`). Pass `""` to run with zero simulated drift.
+- `--llm-provider <provider>`: Select the LLM engine for the 5-agent reasoning council (`openrouter`, `gemini`, `openai`, `anthropic`, `ollama`, or `deterministic`).
+- `--llm-model <model>`: Override the default model identifier (e.g., `anthropic/claude-3.7-sonnet`, `google/gemini-2.5-pro`, `openai/gpt-4o`, or `deepseek/deepseek-r1` via OpenRouter).
+
+### Running with OpenRouter or Other Cloud/Local LLMs
+
+Create a `.env` file in the repository root (automatically ignored by `.gitignore`) or export environment variables:
+
+```ini
+OPENROUTER_API_KEY=sk-or-v1-...
+GEMINI_API_KEY=AIza...
+OPENAI_API_KEY=sk-proj-...
+ANTHROPIC_API_KEY=sk-ant-...
+```
+
+Then run `produce` with `--llm-provider openrouter`:
+
+```powershell
+$env:PYTHONPATH="src"
+python -m videostudio.cli produce `
+  --episode-id S01E01 `
+  --llm-provider openrouter `
+  --llm-model "anthropic/claude-3.7-sonnet"
+```
+
+#### Security Guarantees (`videostudio.llm`)
+- **Zero Plaintext Persistence**: API keys are held in-memory inside Pydantic `SecretStr` containers (`SecureCredentialStore`) and are **never** written to `workflow_checkpoint.json`, `workflow_history.jsonl`, SSE streams, or browser storage.
+- **SSRF & Transport Allowlisting**: Cloud providers (`openrouter.ai`, `generativelanguage.googleapis.com`, `api.openai.com`, `api.anthropic.com`) enforce HTTPS and strict hostname allowlisting; `ollama` is restricted strictly to loopback (`127.0.0.1` / `localhost`).
+- **Automatic Token Redaction**: `redact_secrets()` scrubs any `sk-or-v1-*`, `sk-*`, `AIza*`, or `Bearer` token patterns from exception messages and audit logs.
 
 ---
 
@@ -109,16 +137,19 @@ Open **[http://127.0.0.1:8000](http://127.0.0.1:8000)** in your browser.
 
 ### Control Room Walkthrough
 
-1. **Left Panel — 1. Dispatch Episodic Production**:
+1. **Left Panel — 0. Secure LLM Engine & OpenRouter Configuration**:
+   - Select your **LLM Provider** (`openrouter`, `gemini`, `openai`, `anthropic`, `ollama`, or `deterministic`) and **Model Identifier** (with auto-suggested models for each provider).
+   - Check the masked **Credential Status** (`READY (sk-or-...cdef)` or `MISSING KEY`), or paste a session-only API key into the write-only password field to store it in server memory.
+2. **Left Panel — 1. Dispatch Episodic Production**:
    - Enter your **Episode ID** (e.g., `S01E01`), **Season Arc**, and **Story Seed**.
    - Choose whether to run all 6 phases automatically or pause at a **Human Verification Gate** (`Phase I: Narrative Arc Sign-off` or `Phase II: Dialogue & Tone Validation`).
    - Click **Execute 6-Phase Production Pipeline**.
-2. **Left Panel — 2. Upstream Continuity Mutation Test**:
+3. **Left Panel — 2. Upstream Continuity Mutation Test**:
    - Enter an upstream shot ID (e.g., `SC01_SH01`), a new physical trauma condition (e.g., `cryo_burn_left_wrist`), and an updated prop state (e.g., `cracked_azimuth_glass`).
    - Click **Mutate Upstream & Reconcile Ledger**. All downstream shots (`SC01_SH02`, `SC02_SH01`, etc.) are automatically invalidated and reconciled so progressive wounds and prop changes carry forward across the episode.
-3. **Left Panel — 3. Live Reasoning Graph Audit Trail**:
+4. **Left Panel — 3. Live Reasoning Graph Audit Trail**:
    - Displays every LangGraph node execution in real time, including any cyclical **Semantic Loop** rollbacks.
-4. **Right Panel — Inspection Tabs**:
+5. **Right Panel — Inspection Tabs**:
    - **IV & V. Storyboards & VLM Judge**: View rendered keyframe plates, VLM identity similarity scores ($Score_{ID}$), optical lens/framing badges, and the raw `CinematicShotSpecification` JSON schemas.
    - **Continuity Ledger (Parquet)**: Inspect the 7 canonical continuity columns shot by shot.
    - **I & II. 15-Beat Sheet & ScreenJSON / Fountain**: Read the formatted `.fountain` screenplay, the 15-Beat Save the Cat outline, and the `ThematicDossier`.
@@ -251,9 +282,11 @@ print("OTIO Timeline:", run_state.otio_timeline_path)
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
 | `GET` | `/` | Interactive Production Control Room Web UI |
+| `GET` | `/api/llm/providers` | Returns masked credential status, default models, and suggested models for OpenRouter, Gemini, OpenAI, Anthropic, Ollama, and deterministic mode |
+| `POST` | `/api/llm/credentials` | Sets a write-only session API key in server memory (`SecretStr`) and returns masked status |
 | `GET` | `/api/canon` | Returns Character Bibles, Location Bibles, GraphRAG JSON, and Neo4j Cypher |
 | `POST` | `/api/lore/constraints` | Queries GraphRAG Causal Value Engine & vector tonal precedents |
-| `POST` | `/api/workflows/run` | Starts a 6-phase episodic production workflow |
+| `POST` | `/api/workflows/run` | Starts a 6-phase episodic production workflow with optional `llm_provider` and `llm_model` |
 | `POST` | `/api/workflows/{workflow_id}/approve` | Approves a paused Human Gate and resumes from checkpoint |
 | `GET` | `/api/workflows/{workflow_id}/stream` | Streams Server-Sent Events (`text/event-stream`) for node transitions |
 | `GET` | `/api/episodes/{episode_id}/artifacts` | Returns all generated artifacts, ledger rows, and timeline summary |

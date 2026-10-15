@@ -8,6 +8,7 @@ from typing import List, Optional
 
 import uvicorn
 
+from videostudio.llm import DEFAULT_MODELS, LLMConfig
 from videostudio.lore import seed_default_canon
 from videostudio.orchestrator import DurableMacroOrchestrator
 from videostudio.server import create_app
@@ -43,6 +44,17 @@ def run_cli(argv: Optional[List[str]] = None) -> int:
         default="SC01_SH01",
         help="Comma-separated shot IDs to simulate initial identity drift on (triggers Semantic Loop)",
     )
+    prod_parser.add_argument(
+        "--llm-provider",
+        choices=["deterministic", "openrouter", "gemini", "openai", "anthropic", "ollama"],
+        default="deterministic",
+        help="LLM provider for the 5-agent reasoning council (default: deterministic)",
+    )
+    prod_parser.add_argument(
+        "--llm-model",
+        default=None,
+        help="Optional LLM model identifier (e.g. anthropic/claude-3.7-sonnet for openrouter)",
+    )
 
     # 2. serve command
     serve_parser = subparsers.add_parser(
@@ -61,6 +73,10 @@ def run_cli(argv: Optional[List[str]] = None) -> int:
         drift_set = {
             s.strip() for s in (args.simulate_drift or "").split(",") if s.strip()
         }
+        llm_config = LLMConfig(
+            provider=args.llm_provider,
+            model=args.llm_model or DEFAULT_MODELS[args.llm_provider],
+        )
         orchestrator = DurableMacroOrchestrator(
             storage=storage,
             event_callback=lambda ev: print(
@@ -72,12 +88,15 @@ def run_cli(argv: Optional[List[str]] = None) -> int:
             story_seed=args.seed,
             season_arc=args.season_arc,
             simulate_drift_shots=drift_set,
+            llm_config=llm_config,
         )
         print(
             json.dumps(
                 {
                     "workflow_id": run_state.workflow_id,
                     "status": run_state.status,
+                    "llm_provider": llm_config.provider,
+                    "llm_model": llm_config.model,
                     "otio_timeline_path": run_state.otio_timeline_path,
                     "semantic_loop_iterations": run_state.graph_state.get(
                         "semantic_loop_iterations", 0

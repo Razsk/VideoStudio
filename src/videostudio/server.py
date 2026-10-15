@@ -10,6 +10,13 @@ from fastapi.responses import FileResponse, HTMLResponse, StreamingResponse
 from pydantic import BaseModel, Field
 
 from videostudio.continuity import ContinuityLedger
+from videostudio.llm import (
+    DEFAULT_MODELS,
+    SUGGESTED_MODELS,
+    LLMConfig,
+    LLMProviderType,
+    SecureCredentialStore,
+)
 from videostudio.lore import seed_default_canon
 from videostudio.orchestrator import DurableMacroOrchestrator
 from videostudio.storage import StudioStorage
@@ -30,6 +37,13 @@ class RunWorkflowRequest(BaseModel):
             "phase_6_final_playback",
         ]
     ] = None
+    llm_provider: LLMProviderType = "deterministic"
+    llm_model: Optional[str] = None
+
+
+class SetCredentialRequest(BaseModel):
+    provider: Literal["openrouter", "gemini", "openai", "anthropic"]
+    api_key: str = Field(..., min_length=8)
 
 
 class ApproveGateRequest(BaseModel):
@@ -260,6 +274,34 @@ STUDIO_DASHBOARD_HTML = """<!DOCTYPE html>
   <main>
     <section>
       <div class="card">
+        <h2>0. Secure LLM Engine & OpenRouter Configuration</h2>
+        <div style="font-size:0.78rem;color:var(--muted);">
+          API keys are held strictly in server memory (<code>SecretStr</code>) or loaded from <code>.env</code>. Keys are never written to checkpoints, logs, or browser storage.
+        </div>
+        <label>LLM Provider</label>
+        <select id="llm-provider" onchange="onProviderChange()">
+          <option value="openrouter">OpenRouter (Unified Multi-Model Gateway)</option>
+          <option value="gemini">Google Gemini</option>
+          <option value="openai">OpenAI</option>
+          <option value="anthropic">Anthropic Claude</option>
+          <option value="ollama">Ollama (Local Loopback Only)</option>
+          <option value="deterministic" selected>Deterministic Offline Reference Engine</option>
+        </select>
+        <label>Model Identifier</label>
+        <input id="llm-model" list="model-suggestions" value="deterministic-reference-v1" />
+        <datalist id="model-suggestions"></datalist>
+        <div id="cred-box" style="margin-top:8px;padding:10px;background:#090e17;border:1px solid var(--border);border-radius:6px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;">
+            <span>Credential Status:</span>
+            <span id="cred-status" style="color:var(--accent);font-weight:600;">Checking...</span>
+          </div>
+          <label style="margin-top:8px;">Set Session API Key (write-only, never stored in browser)</label>
+          <input id="llm-api-key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-or-v1-... (cleared immediately on save)" />
+          <button class="secondary" style="margin-top:8px;padding:7px 12px;" onclick="saveSessionKey()">Save Key to Secure Server Memory</button>
+        </div>
+      </div>
+
+      <div class="card">
         <h2>1. Dispatch Episodic Production</h2>
         <label>Episode ID</label>
         <input id="episode-id" value="S01E01" />
@@ -342,6 +384,48 @@ STUDIO_DASHBOARD_HTML = """<!DOCTYPE html>
   <script>
     let currentWorkflowId = null;
     let currentPendingGate = null;
+    let llmProvidersMeta = null;
+
+    async function loadLLMProviders() {
+      const res = await fetch('/api/llm/providers');
+      if (!res.ok) return;
+      llmProvidersMeta = await res.json();
+      onProviderChange();
+    }
+
+    function onProviderChange() {
+      if (!llmProvidersMeta) return;
+      const provider = document.getElementById('llm-provider').value;
+      const modelInput = document.getElementById('llm-model');
+      const datalist = document.getElementById('model-suggestions');
+      const suggested = (llmProvidersMeta.suggested_models && llmProvidersMeta.suggested_models[provider]) || [];
+      datalist.innerHTML = suggested.map(m => `<option value="${m}"></option>`).join('');
+      if (llmProvidersMeta.default_models && llmProvidersMeta.default_models[provider]) {
+        modelInput.value = llmProvidersMeta.default_models[provider];
+      }
+      const pStatus = llmProvidersMeta.providers && llmProvidersMeta.providers[provider];
+      const statusEl = document.getElementById('cred-status');
+      if (pStatus) {
+        statusEl.textContent = pStatus.configured ? `READY (${pStatus.masked_key})` : 'MISSING KEY';
+        statusEl.style.color = pStatus.configured ? 'var(--success)' : 'var(--accent-amber)';
+      }
+    }
+
+    async function saveSessionKey() {
+      const provider = document.getElementById('llm-provider').value;
+      const keyInput = document.getElementById('llm-api-key');
+      const api_key = keyInput.value.trim();
+      keyInput.value = '';
+      if (!api_key) return;
+      const res = await fetch('/api/llm/credentials', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({provider, api_key})
+      });
+      if (res.ok) {
+        await loadLLMProviders();
+      }
+    }
 
     function showTab(tabId, btn) {
       for (const id of ['tab-storyboards','tab-ledger','tab-script','tab-otio','tab-canon']) {
@@ -370,13 +454,23 @@ STUDIO_DASHBOARD_HTML = """<!DOCTYPE html>
       const story_seed = document.getElementById('story-seed').value.trim();
       const driftRaw = document.getElementById('drift-shots').value.trim();
       const pause_at_human_gate = document.getElementById('human-gate').value || null;
+      const llm_provider = document.getElementById('llm-provider').value;
+      const llm_model = document.getElementById('llm-model').value.trim() || null;
       const simulate_drift_shots = driftRaw ? driftRaw.split(',').map(s => s.trim()).filter(Boolean) : [];
 
       document.getElementById('wf-status-badge').textContent = 'RUNNING...';
       const res = await fetch('/api/workflows/run', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({episode_id, story_seed, season_arc, simulate_drift_shots, pause_at_human_gate})
+        body: JSON.stringify({
+          episode_id,
+          story_seed,
+          season_arc,
+          simulate_drift_shots,
+          pause_at_human_gate,
+          llm_provider,
+          llm_model
+        })
       });
       const data = await res.json();
       handleWorkflowResponse(data);
@@ -540,6 +634,7 @@ STUDIO_DASHBOARD_HTML = """<!DOCTYPE html>
     }
 
     loadCanon();
+    loadLLMProviders();
   </script>
 </body>
 </html>
@@ -550,10 +645,12 @@ def create_app(root_dir: Path | str = ".") -> FastAPI:
     storage = StudioStorage(root_dir=root_dir)
     lore_graph = seed_default_canon(storage)
     sse_events: List[Dict[str, Any]] = []
+    credential_store = SecureCredentialStore(dotenv_paths=[storage.root_dir / ".env"])
 
     orchestrator = DurableMacroOrchestrator(
         storage=storage,
         event_callback=lambda ev: sse_events.append(ev),
+        credential_store=credential_store,
     )
 
     app = FastAPI(
@@ -564,6 +661,22 @@ def create_app(root_dir: Path | str = ".") -> FastAPI:
     @app.get("/", response_class=HTMLResponse)
     def index() -> HTMLResponse:
         return HTMLResponse(content=STUDIO_DASHBOARD_HTML)
+
+    @app.get("/api/llm/providers")
+    def get_llm_providers() -> Dict[str, Any]:
+        return {
+            "providers": credential_store.get_provider_status(),
+            "default_models": DEFAULT_MODELS,
+            "suggested_models": SUGGESTED_MODELS,
+        }
+
+    @app.post("/api/llm/credentials")
+    def set_llm_credential(req: SetCredentialRequest) -> Dict[str, Any]:
+        try:
+            credential_store.set_session_key(req.provider, req.api_key)
+            return credential_store.get_provider_status()[req.provider]
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
 
     @app.get("/api/canon")
     def get_canon() -> Dict[str, Any]:
@@ -589,12 +702,17 @@ def create_app(root_dir: Path | str = ".") -> FastAPI:
 
     @app.post("/api/workflows/run")
     def run_workflow(req: RunWorkflowRequest) -> Dict[str, Any]:
+        llm_config = LLMConfig(
+            provider=req.llm_provider,
+            model=req.llm_model or DEFAULT_MODELS[req.llm_provider],
+        )
         run_state = orchestrator.execute_episode_workflow(
             episode_id=req.episode_id,
             story_seed=req.story_seed,
             season_arc=req.season_arc,
             simulate_drift_shots=set(req.simulate_drift_shots),
             pause_at_human_gate=req.pause_at_human_gate,
+            llm_config=llm_config,
         )
         return run_state.model_dump()
 

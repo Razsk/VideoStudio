@@ -12,6 +12,7 @@ from temporalio import activity, workflow
 from temporalio.common import RetryPolicy
 
 from videostudio.agents import EpisodeGraphState, EpisodeReasoningEngine
+from videostudio.llm import LLMConfig, LLMGateway, SecureCredentialStore, redact_secrets
 
 if TYPE_CHECKING:
     from videostudio.storage import StudioStorage
@@ -39,6 +40,7 @@ class WorkflowRunState(BaseModel):
     completed_phases: List[str] = Field(default_factory=list)
     pending_gate: Optional[str] = None
     human_approvals: Dict[str, str] = Field(default_factory=dict)
+    llm_config: LLMConfig = Field(default_factory=LLMConfig)
     graph_state: Dict[str, Any] = Field(default_factory=dict)
     otio_timeline_path: Optional[str] = None
 
@@ -53,7 +55,8 @@ async def execute_langgraph_episode_activity(params: Dict[str, Any]) -> Dict[str
     from videostudio.storage import StudioStorage
 
     storage = StudioStorage(root_dir=params.get("root_dir", "."))
-    engine = EpisodeReasoningEngine(storage=storage)
+    llm_cfg = LLMConfig.model_validate(params.get("llm_config", {})) if params.get("llm_config") else LLMConfig()
+    engine = EpisodeReasoningEngine(storage=storage, llm_config=llm_cfg)
     state = engine.run_episode(
         episode_id=params["episode_id"],
         story_seed=params["story_seed"],
@@ -109,10 +112,12 @@ class DurableMacroOrchestrator:
         storage: "StudioStorage",
         retry_policy: Optional[RetryPolicyConfig] = None,
         event_callback: Optional[Callable[[Dict[str, Any]], None]] = None,
+        credential_store: Optional[SecureCredentialStore] = None,
     ) -> None:
         self.storage = storage
         self.retry_policy = retry_policy or RetryPolicyConfig()
         self.event_callback = event_callback
+        self.credential_store = credential_store or SecureCredentialStore()
         self._runs: Dict[str, WorkflowRunState] = {}
 
     def _history_file(self, season: int, episode: int) -> Path:
@@ -139,7 +144,7 @@ class DurableMacroOrchestrator:
         }
         path = self._history_file(season, episode)
         with path.open("a", encoding="utf-8") as f:
-            f.write(json.dumps(record) + "\n")
+            f.write(redact_secrets(json.dumps(record)) + "\n")
 
     def load_workflow_history(self, season: int, episode: int) -> List[Dict[str, Any]]:
         path = self._history_file(season, episode)
@@ -155,7 +160,8 @@ class DurableMacroOrchestrator:
         self._runs[run_state.workflow_id] = run_state
         ckpt_path = self._checkpoint_file(run_state.season, run_state.episode)
         ckpt_path.write_text(
-            json.dumps(run_state.model_dump(), indent=2), encoding="utf-8"
+            redact_secrets(json.dumps(run_state.model_dump(), indent=2)),
+            encoding="utf-8",
         )
 
     def get_run(self, workflow_id: str) -> WorkflowRunState:
@@ -207,7 +213,7 @@ class DurableMacroOrchestrator:
                     {
                         "activity": activity_name,
                         "attempt": attempt,
-                        "error": str(exc),
+                        "error": redact_secrets(str(exc)),
                     },
                 )
                 if attempt >= self.retry_policy.max_attempts:
@@ -229,14 +235,17 @@ class DurableMacroOrchestrator:
             ]
         ] = None,
         workflow_id: Optional[str] = None,
+        llm_config: Optional[LLMConfig] = None,
     ) -> WorkflowRunState:
         season, episode = self.storage.parse_episode_id(episode_id)
         wf_id = workflow_id or f"wf-{episode_id.lower()}-{uuid.uuid4().hex[:8]}"
+        resolved_llm_config = llm_config or LLMConfig()
 
         if wf_id in self._runs:
             run_state = self._runs[wf_id]
             run_state.status = "RUNNING"
             run_state.pending_gate = None
+            resolved_llm_config = run_state.llm_config
         else:
             initial_graph_state: EpisodeGraphState = {
                 "episode_id": episode_id,
@@ -256,6 +265,7 @@ class DurableMacroOrchestrator:
                 story_seed=story_seed,
                 season_arc=season_arc,
                 status="RUNNING",
+                llm_config=resolved_llm_config,
                 graph_state=dict(initial_graph_state),
             )
             self._append_history_event(
@@ -263,12 +273,20 @@ class DurableMacroOrchestrator:
                 episode,
                 wf_id,
                 "WORKFLOW_STARTED",
-                {"episode_id": episode_id, "story_seed": story_seed},
+                {
+                    "episode_id": episode_id,
+                    "story_seed": story_seed,
+                    "llm_provider": resolved_llm_config.provider,
+                    "llm_model": resolved_llm_config.model,
+                },
             )
 
+        gateway = LLMGateway(credential_store=self.credential_store)
         engine = EpisodeReasoningEngine(
             storage=self.storage,
             event_callback=self.event_callback,
+            llm_config=resolved_llm_config,
+            llm_gateway=gateway,
         )
 
         # Rehydrate ledger cache if resuming after Phase III

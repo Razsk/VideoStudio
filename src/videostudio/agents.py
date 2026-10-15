@@ -46,6 +46,7 @@ from videostudio.schemas import (
     ThematicDossier,
     TransitionElement,
 )
+from videostudio.llm import LLMConfig, LLMGateway
 
 if TYPE_CHECKING:
     from videostudio.storage import StudioStorage
@@ -68,6 +69,8 @@ class ResearchLoreAgent:
         story_seed: str,
         season_arc: str,
         lore_graph: LoreGraph,
+        llm_config: Optional[LLMConfig] = None,
+        llm_gateway: Optional[LLMGateway] = None,
     ) -> ThematicDossier:
         precedents = lore_graph.retrieve_tonal_precedents(story_seed, top_k=2)
         entity_ids = list(lore_graph.nodes.keys())
@@ -79,6 +82,26 @@ class ResearchLoreAgent:
             "Dr. Marcus Koren holds dual allegiance with the Aether Directorate.",
             f"Accessible artifacts at episode start: {', '.join(elena_constraints['accessible_artifacts']) or 'ART_CHRONO_COMPASS'}",
         ]
+
+        if llm_config and llm_config.provider != "deterministic" and llm_gateway:
+            try:
+                return llm_gateway.generate_structured(
+                    config=llm_config,
+                    system_prompt=(
+                        "You are the Research and Lore Agent for an automated episodic video studio. "
+                        "Synthesize a ThematicDossier adhering strictly to the provided GraphRAG worldbuilding constraints."
+                    ),
+                    user_prompt=(
+                        f"Episode ID: {episode_id}\nStory Seed: {story_seed}\n"
+                        f"Season Arc: {season_arc}\nImmutable Facts: {immutable_facts}\n"
+                        f"Entities: {entity_ids}\nTonal Precedents: {[p['text'] for p in precedents]}"
+                    ),
+                    response_model=ThematicDossier,
+                )
+            except Exception:
+                if not llm_config.fallback_to_deterministic:
+                    raise
+
         return ThematicDossier(
             episode_id=episode_id,
             story_seed=story_seed,
@@ -580,9 +603,13 @@ class EpisodeReasoningEngine:
         self,
         storage: "StudioStorage",
         event_callback: Optional[Callable[[Dict[str, Any]], None]] = None,
+        llm_config: Optional[LLMConfig] = None,
+        llm_gateway: Optional[LLMGateway] = None,
     ) -> None:
         self.storage = storage
         self.event_callback = event_callback
+        self.llm_config = llm_config or LLMConfig()
+        self.llm_gateway = llm_gateway or LLMGateway()
         self.lore_graph = seed_default_canon(storage)
         self.character_bibles = {
             b.character_id: b for b in storage.list_character_bibles()
@@ -617,6 +644,8 @@ class EpisodeReasoningEngine:
             story_seed=state["story_seed"],
             season_arc=state.get("season_arc", "The Jovian Shadow Conspiracy"),
             lore_graph=self.lore_graph,
+            llm_config=self.llm_config,
+            llm_gateway=self.llm_gateway,
         )
         ep_dirs = self.storage.ensure_episode_directories(state["season"], state["episode"])
         (ep_dirs["script"] / "thematic_dossier.json").write_text(
@@ -625,8 +654,12 @@ class EpisodeReasoningEngine:
         ev = self._emit(
             "research_lore",
             "I. Narrative Inception",
-            f"Compiled Thematic Dossier (Setting Adherence={dossier.setting_adherence_score:.2f})",
-            {"setting_adherence_score": dossier.setting_adherence_score},
+            f"Compiled Thematic Dossier via {self.llm_config.provider}/{self.llm_config.model} (Setting Adherence={dossier.setting_adherence_score:.2f})",
+            {
+                "setting_adherence_score": dossier.setting_adherence_score,
+                "llm_provider": self.llm_config.provider,
+                "llm_model": self.llm_config.model,
+            },
         )
         trail = list(state.get("audit_trail", [])) + [ev]
         return {"thematic_dossier": dossier.model_dump(), "audit_trail": trail}
